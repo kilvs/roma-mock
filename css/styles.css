@@ -376,6 +376,8 @@ main:focus { outline: none; }
 .menu-toggle[aria-expanded="false"] .icon--close { display: none; }
 
 .mobile-menu {
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-top: 1px solid var(--c-border);
   background: var(--c-bg);
   box-shadow: 0 24px 40px -24px rgba(19, 48, 31, .4);
@@ -975,6 +977,7 @@ main:focus { outline: none; }
   transition: background-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .theme-fab:hover { background: #143823; transform: translateY(-2px); }
+.theme-fab:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; box-shadow: 0 0 0 8px #13241A, 0 14px 30px -12px rgba(19, 48, 31, .6); }
 .theme-fab .icon { width: 22px; height: 22px; }
 .theme-fab .icon--sun { display: none; }
 [data-theme="dark"] .theme-fab { background: var(--brand-gold); color: #13241A; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .8); }
@@ -1015,6 +1018,22 @@ main:focus { outline: none; }
   .hero__media img { border-radius: 0; object-position: 40% 55%; }
 
   .carousel__track { grid-auto-columns: calc((100% - var(--gap)) / 2); }
+  .contact__label { display: block; }
+}
+
+/* Tablet and phone: trust strip text stays clear of the floating theme button */
+@media (max-width: 1024px) {
+  .trust__list { padding-right: 64px; }
+}
+/* The menu skips the Apply button the bar already shows */
+@media (min-width: 761px) and (max-width: 1024px) {
+  .mobile-menu__cta { display: none; }
+}
+
+/* Short screens (landscape phones): tighter menu rows */
+@media (max-height: 500px) {
+  .mobile-menu__link { min-height: 48px; }
+  .mobile-menu__cta { padding: 12px 0 14px; }
 }
 @media (min-width: 1025px) {
   .mobile-menu { display: none; }
@@ -1077,7 +1096,6 @@ main:focus { outline: none; }
   .value__name { margin: 6px 0 6px; }
 
   .map__frame { min-height: 280px; }
-  .contact__label { display: block; }
   .accred { padding: 22px 18px; }
   .accred__step { gap: 14px; padding: 18px 16px; }
   .theme-fab { width: 48px; height: 48px; }
@@ -1094,6 +1112,24 @@ main:focus { outline: none; }
   .door__label { padding-right: 0; }
   .door__arrow { position: static; width: 32px; height: 32px; }
   .door__go-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* 320px phones: smaller contact badges so the emails keep one line */
+@media (max-width: 340px) {
+  .licence-bar__text .icon { display: none; }
+  .contact__item { grid-template-columns: 36px minmax(0, 1fr); gap: 12px; }
+  .contact__item .badge { width: 36px; height: 36px; }
+}
+
+/* Very small phones, e.g. 320x568 */
+@media (max-width: 400px) and (max-height: 640px) {
+  .hero__content { padding-block: 18px 20px; gap: 12px; }
+  .hero__title { font-size: 2rem; }
+  .hero__lead { font-size: 0.9375rem; line-height: 1.55; }
+  .doors { margin-top: 2px; gap: 8px; }
+  .door { padding: 10px 12px 10px 14px; }
+  .theme-fab { right: 10px; bottom: 10px; width: 40px; height: 40px; }
+  .theme-fab .icon { width: 18px; height: 18px; }
 }
 
 /* ---------- 16. Reduced motion ---------- */

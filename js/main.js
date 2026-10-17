@@ -21,7 +21,7 @@
     themeBtn.setAttribute('aria-label', label);
     themeBtn.setAttribute('title', label);
     if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#173524' : '#1D4A30');
-    try { localStorage.setItem('roma-theme', theme); } catch (e) {}
+    if (animate) { try { localStorage.setItem('roma-theme', theme); } catch (e) {} }
   }
 
   if (themeBtn) {
@@ -40,7 +40,11 @@
     menu.hidden = !open;
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    if (open) header.classList.remove('is-hidden');
+    if (open) {
+      header.classList.remove('is-hidden');
+      var barBottom = header.querySelector('.site-header__bar').getBoundingClientRect().bottom;
+      menu.style.maxHeight = Math.max(160, window.innerHeight - barBottom) + 'px';
+    }
   }
 
   if (menuBtn && menu) {
@@ -55,6 +59,7 @@
     window.matchMedia('(min-width: 1025px)').addEventListener('change', function (e) {
       if (e.matches) setMenu(false);
     });
+    window.addEventListener('resize', function () { if (!menu.hidden) setMenu(true); });
   }
 
   // Header: sticky; hides on scroll down, returns on scroll up or when anything in it gets focus.
@@ -103,7 +108,11 @@
       var w = stepSize() || 1;
       var firstIndex = Math.round(track.scrollLeft / w);
       var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-      prev.disabled = track.scrollLeft < 4;
+      var atStart = track.scrollLeft < 4;
+      var active = document.activeElement;
+      if (active === next && atEnd && !atStart) prev.focus();
+      else if (active === prev && atStart && !atEnd) next.focus();
+      prev.disabled = atStart;
       next.disabled = atEnd;
       var count = slides.length;
       var shown = perView();
