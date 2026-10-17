@@ -120,6 +120,71 @@
     prev.addEventListener('click', function () { page(-1); });
     next.addEventListener('click', function () { page(1); });
 
+    // Drag with a mouse or pen. Touch keeps the browser's own swipe.
+    // Snap is off while dragging, then the row glides to the nearest card (a flick carries further).
+    var drag = null;
+    var justDragged = false;
+    var settleTimer = 0;
+
+    var settle = function () {
+      window.clearTimeout(settleTimer);
+      track.classList.remove('is-free');
+    };
+
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'touch' || e.button !== 0) return;
+      settle();
+      justDragged = false;
+      drag = { id: e.pointerId, startX: e.clientX, startLeft: track.scrollLeft, lastX: e.clientX, lastT: e.timeStamp, v: 0, moved: false };
+    });
+
+    track.addEventListener('pointermove', function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      if (!(e.buttons & 1)) { drag = null; return; }
+      var dx = e.clientX - drag.startX;
+      if (!drag.moved) {
+        if (Math.abs(dx) < 6) return;
+        drag.moved = true;
+        track.setPointerCapture(e.pointerId);
+        track.classList.add('is-dragging', 'is-free');
+        var sel = window.getSelection && window.getSelection();
+        if (sel && sel.removeAllRanges) sel.removeAllRanges();
+      }
+      track.scrollLeft = drag.startLeft - dx;
+      var dt = e.timeStamp - drag.lastT;
+      if (dt > 0) drag.v = 0.8 * ((e.clientX - drag.lastX) / dt) + 0.2 * drag.v;
+      drag.lastX = e.clientX;
+      drag.lastT = e.timeStamp;
+    });
+
+    var endDrag = function (e) {
+      if (!drag || (e && e.pointerId !== drag.id)) return;
+      var d = drag;
+      drag = null;
+      if (!d.moved) return;
+      justDragged = true;
+      window.setTimeout(function () { justDragged = false; }, 60);
+      track.classList.remove('is-dragging');
+      var w = stepSize() || 1;
+      var maxLeft = track.scrollWidth - track.clientWidth;
+      var flick = (e && e.timeStamp - d.lastT < 80) ? d.v * 220 : 0;
+      var target = Math.min(maxLeft, Math.max(0, Math.round((track.scrollLeft - flick) / w) * w));
+      track.scrollTo({ left: target, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      // Snap comes back once the glide is done.
+      if ('onscrollend' in window) track.addEventListener('scrollend', settle, { once: true });
+      settleTimer = window.setTimeout(settle, 700);
+    };
+
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    track.addEventListener('lostpointercapture', endDrag);
+
+    // A drag never opens the card it started on; a plain click still does.
+    track.addEventListener('click', function (e) {
+      if (justDragged) { e.preventDefault(); e.stopPropagation(); justDragged = false; }
+    }, true);
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
     var scrollTick = false;
     track.addEventListener('scroll', function () {
       if (!scrollTick) { window.requestAnimationFrame(function () { sync(); scrollTick = false; }); scrollTick = true; }

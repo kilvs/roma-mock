@@ -541,6 +541,14 @@ main:focus { outline: none; }
   scrollbar-width: none;
 }
 .carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track img { -webkit-user-drag: none; user-select: none; }
+@media (hover: hover) and (pointer: fine) {
+  .carousel__track,
+  .carousel__track .job__link { cursor: grab; }
+}
+.carousel__track.is-dragging,
+.carousel__track.is-dragging * { cursor: grabbing; -webkit-user-select: none; user-select: none; }
+.carousel__track.is-free { scroll-snap-type: none; }
 .carousel__slide { scroll-snap-align: start; display: flex; }
 .carousel__status {
   margin-top: 4px;
