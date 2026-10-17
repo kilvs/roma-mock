@@ -6,752 +6,514 @@
 <meta name="robots" content="noindex, nofollow">
 <title>ROMA Overseas Manpower Inc. | Website mock</title>
 <meta name="description" content="Design mock of the ROMA Overseas Manpower Inc. website. Placeholder content.">
-<link rel="icon" href="assets/roma-icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1D4A30">
+<link rel="icon" href="assets/logo/roma-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
-<style>
-body{margin:0}
-.ro{--bg:#FFFFFF;--bg-tint:#F2F6F3;--ink:#13261B;--ink-soft:#3E5246;--line:#DCE5DF;--line-strong:#B9C9BE;--brand:#1D4A30;--brand-ink:#FFFFFF;--brand-fill:#2B6545;--gold-fill:#F0D474;--gold-text:#7E5E27;--link:#1D4A30;--focus:#009447;--card-a:#FFFFFF;--card-b:#F5F8F6;--pill:#E6F0E9;--pill-ink:#1D4A30;--shadow:0 24px 48px -24px rgba(29,74,48,.38);--shadow-hover:0 34px 60px -26px rgba(29,74,48,.5);--frost:rgba(255,255,255,.74);--frost-line:rgba(255,255,255,.9);--ph-bg:rgba(216,182,72,.22);--hdr-bg:rgba(255,255,255,.74);--hdr-bg-solid:rgba(255,255,255,.95);--hdr-line:rgba(255,255,255,.95);--lic-bg:#E6EFE9;--gold-stroke:#C29E35;
-font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background-color .35s ease,color .35s ease;position:relative}
-.ro.t-dark{--bg:#0E1D15;--bg-tint:#12261A;--ink:#EEF3EF;--ink-soft:#B4C6BA;--line:#24402F;--line-strong:#335640;--brand:#D8B648;--brand-ink:#13261B;--brand-fill:#ECCD68;--gold-text:#E2C766;--link:#E2C766;--focus:#D8B648;--card-a:#173023;--card-b:#12281C;--pill:#1F3D2B;--pill-ink:#D9E8DE;--shadow:0 24px 48px -24px rgba(0,0,0,.75);--shadow-hover:0 34px 60px -26px rgba(0,0,0,.85);--frost:rgba(23,48,35,.66);--frost-line:rgba(255,255,255,.10);--ph-bg:rgba(216,182,72,.16);--hdr-bg:rgba(14,29,21,.62);--hdr-bg-solid:rgba(12,26,19,.94);--hdr-line:rgba(255,255,255,.10);--lic-bg:#0A1610;--gold-stroke:#D8B648}
-.ro *{box-sizing:border-box}
-.ro ::selection{background:#D8B648;color:#13261B}
-.ro a{color:var(--link);text-underline-offset:3px}
-.ro a:focus-visible,.ro button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.ro h1,.ro h2,.ro h3,.ro h4,.ro p{margin:0}
-.ro h1,.ro h2{text-wrap:balance;letter-spacing:-.018em}
-.ro p{text-wrap:pretty}
-.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
-@media (min-width:1600px){
-.wrap{max-width:1920px;padding-inline:clamp(48px,5vw,120px)}
-.hero-photo{max-height:640px}
-}
-.skip{position:absolute;left:12px;top:-80px;z-index:80;background:#D8B648;color:#13261B;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
-.skip:focus{top:12px}
-
-/* Buttons: colour sweeps in from the left on hover */
-.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;line-height:1.2;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:color .3s ease,border-color .3s ease,box-shadow .3s ease}
-.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--btn-fill);transform:scaleX(0);transform-origin:left center;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-.btn:hover::before,.card-link:hover .btn::before{transform:scaleX(1)}
-.btn:hover{box-shadow:0 12px 24px -12px rgba(10,22,16,.55)}
-.btn-primary{background:var(--brand);color:var(--brand-ink);--btn-fill:var(--brand-fill)}
-.btn-gold{background:#D8B648;color:#13261B;--btn-fill:var(--gold-fill)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line-strong);--btn-fill:var(--brand)}
-.btn-ghost:hover{border-color:var(--brand)}
-.btn-glass{background:rgba(255,255,255,.12);color:#FFFFFF;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);--btn-fill:rgba(255,255,255,.24)}
-.ro a.btn-primary,.ro span.btn-primary{color:var(--brand-ink)}
-.ro a.btn-gold{color:#13261B}
-.ro a.btn-ghost{color:var(--ink)}
-.ro a.btn-ghost:hover{color:var(--brand-ink)}
-.ro a.btn-glass{color:#FFFFFF}
-
-/* Glass */
-.glass{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 24px 60px -28px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18);color:#FFFFFF}
-.glass-dark{background:rgba(9,24,16,.66);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);box-shadow:0 18px 40px -20px rgba(0,0,0,.6);color:#FFFFFF}
-.frost{background:var(--frost);border:1px solid var(--frost-line);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:var(--shadow)}
-
-.theme-fab{position:fixed;right:clamp(16px,2vw,28px);bottom:clamp(16px,2vw,28px);z-index:70;width:58px;height:58px;border-radius:999px;border:0;background:var(--brand);color:var(--brand-ink);box-shadow:0 18px 36px -14px rgba(19,38,27,.6),0 0 0 6px rgba(216,182,72,.18);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s ease,box-shadow .3s ease,background-color .35s ease}
-.theme-fab:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px rgba(19,38,27,.7),0 0 0 8px rgba(216,182,72,.26)}
-.fab-ic{display:inline-flex}
-.fab-ic svg{animation:spin-in .5s cubic-bezier(.2,.7,.2,1)}
-@keyframes spin-in{from{transform:rotate(-90deg) scale(.6);opacity:0}to{transform:none;opacity:1}}
-/* Sticky top bar: hides on scroll down, returns on scroll up */
-.topbar{position:fixed;left:0;right:0;top:0;z-index:60;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.topbar.is-hidden{transform:translateY(-115%)}
-.lic{overflow:hidden;max-height:80px;opacity:1;transition:max-height .35s ease,opacity .25s ease}
-.topbar.is-scrolled .lic{max-height:0;opacity:0}
-.bar{transition:background-color .35s ease,border-color .35s ease}
-.bar{background:var(--hdr-bg);border:1px solid var(--hdr-line);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 18px 40px -24px rgba(19,38,27,.35);color:var(--ink)}
-.topbar.is-scrolled .bar,.topbar.is-open .bar{background:var(--hdr-bg-solid)}
-.hdr-space{height:146px}
-.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:12px 2px;border-bottom:2px solid transparent;white-space:nowrap;transition:border-color .25s ease}
-.nav a:hover{border-bottom-color:#D8B648}
-.icon-btn{width:48px;height:48px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .3s ease}
-.icon-btn:hover{background:var(--pill)}
-.menu-btn{display:none}
-.drop{flex-basis:100%;display:flex;flex-direction:column;gap:4px;padding:8px 0 6px;border-top:1px solid var(--line);animation:drop .35s cubic-bezier(.2,.7,.2,1) both}
-.drop a.dl{color:var(--ink);text-decoration:none;font-weight:700;font-size:18px;padding:14px 6px;border-radius:12px;transition:background-color .25s ease}
-.drop a.dl:hover{background:var(--pill)}
-@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-
-/* Hero */
-.hero{position:relative;background:radial-gradient(circle at 82% 35%,rgba(0,148,71,.10),transparent 45%),radial-gradient(circle at 8% 92%,rgba(216,182,72,.16),transparent 40%),var(--bg-tint);color:var(--ink);overflow:hidden;transition:background-color .35s ease}
-.hero-visual{position:relative}
-.hero-photo{aspect-ratio:5/4}
-.door-a{position:absolute;left:0;bottom:0}
-.door-b{position:absolute;right:-8px;top:0}
-.ic-gold{stroke:var(--gold-text)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4.5vw,72px);align-items:center}
-.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:clamp(200px,18vw,300px) clamp(190px,16vw,280px);gap:14px}
-.t-wide{grid-column:span 2}
-.tile{position:relative;border-radius:24px;overflow:hidden}
-.tile img{width:100%;height:100%;object-fit:cover;display:block}
-.tile-door{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:clamp(18px,1.8vw,26px);text-decoration:none;box-shadow:var(--shadow)}
-.ro a.tile-door.tile-gold{background:linear-gradient(160deg,#ECCF6E,#D8B648);color:#13261B}
-.ro a.tile-door.tile-green{background:linear-gradient(160deg,#1F5235,#173E28);color:#FFFFFF}
-.layer{position:relative;z-index:1}
-.door{gap:16px;align-items:flex-start;padding:18px 20px;border-radius:22px;max-width:340px;flex-direction:row}
-.ro a.door{color:var(--ink)}
-.ring{width:48px;height:48px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;flex:none}
-.door:hover .ring{animation:ring 2.4s ease-out infinite}
-@keyframes ring{0%{box-shadow:0 0 0 0 rgba(216,182,72,.6)}70%{box-shadow:0 0 0 16px rgba(216,182,72,0)}100%{box-shadow:0 0 0 0 rgba(216,182,72,0)}}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-.d1{animation-delay:.12s}.d2{animation-delay:.24s}
-@supports (animation-timeline: view()){
-.letter{animation:rise linear both;animation-timeline:view();animation-range:entry 5% cover 30%}
-}
-
-/* Cards that are links */
-.card{background:linear-gradient(180deg,var(--card-a),var(--card-b));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
-.card-link{display:flex;text-decoration:none;color:inherit;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,background-color .35s ease,border-color .35s ease}
-.ro a.card-link{color:inherit}
-.card-link:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.frost.card-link:hover{background:var(--hdr-bg-solid)}
-.glass.card-link:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.34)}
-.go{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--link)}
-.go svg{transition:transform .3s ease}
-.card-link:hover .go svg,.door:hover .go svg{transform:translateX(4px)}
-.job-img{position:relative;aspect-ratio:16/10;overflow:hidden}
-.job-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.card-link:hover .job-img img{transform:scale(1.05)}
-.chip{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
-.pill{display:inline-flex;align-items:center;gap:6px;background:var(--pill);color:var(--pill-ink);font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px}
-.ph{background:var(--ph-bg);color:var(--gold-text);font-weight:600;padding:1px 7px;border-radius:6px}
-.on-dark .ph{color:#E2C766;background:rgba(216,182,72,.18)}
-.track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px) / 3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:10px 6px 30px;margin:-10px -6px 0;scrollbar-width:none;overscroll-behavior-x:contain}
-.track::-webkit-scrollbar{display:none}
-.slide{scroll-snap-align:start}
-.sw-btn{width:50px;height:50px;border-radius:999px;border:1.5px solid var(--line-strong);background:var(--bg);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .3s ease,color .3s ease,border-color .3s ease,opacity .3s ease}
-.sw-btn:hover{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
-.sw-btn[disabled]{opacity:.35;cursor:default;background:var(--bg);color:var(--ink);border-color:var(--line-strong)}
-.dot{width:32px;height:32px;border:0;background:transparent;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
-.dot::after{content:"";width:8px;height:8px;border-radius:999px;background:var(--line-strong);transition:width .35s ease,background-color .35s ease}
-.dot.on::after{width:28px;background:var(--brand)}
-@media (min-width:1600px){.track{grid-auto-columns:calc((100% - 72px) / 4)}}
-@media (max-width:1024px){.track{grid-auto-columns:calc((100% - 24px) / 2)}}
-@media (max-width:640px){.track{grid-auto-columns:84%;gap:16px}}
-.media{position:relative;border-radius:28px;overflow:hidden}
-.media img{width:100%;height:100%;object-fit:cover;display:block}
-
-/* About */
-.about-abs{position:relative;color:var(--ink);background:radial-gradient(circle at 18% 22%,rgba(0,148,71,.12),transparent 46%),radial-gradient(circle at 92% 88%,rgba(216,182,72,.16),transparent 42%),var(--bg);transition:background-color .35s ease}
-.about-sticky{position:sticky;top:112px}
-.vrow{display:flex;align-items:center;text-decoration:none;color:var(--ink)}
-.ro a.vrow{color:var(--ink)}
-.vletter{font-family:"Times New Roman",Times,serif;font-weight:700;font-size:clamp(120px,10vw,190px);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--gold-stroke);position:relative;z-index:2;flex:none;width:.95em;text-align:center;margin-right:-.32em;transition:color .4s ease}
-.vrow:hover .vletter{color:var(--gold-stroke)}
-.foot a{color:#CFE0D5;text-decoration:none}
-.foot a:hover{color:#FFFFFF;text-decoration:underline}
-
-@media (max-width:1024px){
-.hero-grid{grid-template-columns:minmax(0,1fr)}
-.bento{grid-template-rows:210px 210px}
-.nav{display:none !important}
-.menu-btn{display:inline-flex}
-.hero-visual{padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px}
-.hero-photo{display:none}
-.door-a,.door-b{position:static;max-width:none}
-}
-@media (max-width:960px){
-.about-sticky{position:static}
-}
-@media (max-width:720px){
-.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}
-.t-photo{display:none}
-.tile-door{min-height:150px}
-.hero-trust,.door-desc,.lic-long{display:none !important}
-.ro a.door{align-items:center;padding:16px 18px !important}
-.door .ring{width:42px;height:42px}
-.hide-sm{display:none !important}
-.hdr-space{height:128px}
-.vletter{font-size:110px}
-}
-@media (max-width:380px){
-.bento{grid-template-columns:minmax(0,1fr)}
-.tile-door{min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:16px;padding:16px 18px}
-}
-@media (prefers-reduced-motion:reduce){
-.ro *,.ro{animation:none !important;transition:none !important}
-}
-
-.drop[hidden]{display:none !important}
-.only-light,.only-dark,.ic-burger,.ic-close{display:contents}
-.ro.t-dark .only-light,.ro:not(.t-dark) .only-dark{display:none !important}
-.menu-btn[aria-expanded="true"] .ic-burger,.menu-btn[aria-expanded="false"] .ic-close{display:none !important}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@60,400;60,600;60,700&amp;display=swap">
+<link rel="preload" as="image" type="image/webp" href="assets/img/hero-airport-1200.webp" imagesrcset="assets/img/hero-airport-800.webp 800w, assets/img/hero-airport-1200.webp 1200w, assets/img/hero-airport-1600.webp 1600w" imagesizes="(min-width: 1025px) 50vw, 100vw">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  // Light is the default on every first visit; a saved choice wins. Runs before paint so there is no flash.
+  try { if (localStorage.getItem('roma-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+</script>
+<script src="js/main.js" defer></script>
 </head>
 <body>
-<div class="ro" id="ro">
-<a class="skip" href="#main">Skip to content</a>
-<button class="theme-fab" type="button" data-action="theme" aria-label="Switch to dark mode" title="Switch to dark mode">
-<span class="fab-ic"><span class="only-light"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></span>
-<span class="only-dark"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span></span>
-</button>
 
-<!-- Sticky top bar -->
-<div class="topbar" id="topbar">
-<div class="lic" style="background: var(--lic-bg); color: var(--ink-soft); font-size: 13px; transition: background-color .35s ease">
-<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 20px; padding-block: 9px">
-<div style="display: flex; align-items: center; gap: 8px">
-<svg aria-hidden="true" class="ic-gold" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7E5E27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
-<span><span class="lic-long">Licensed by the Department of Migrant Workers. </span>DMW Licence No. <span class="ph">[DMW LICENCE NO.]</span></span>
-</div>
-<a href="#" style="color: var(--gold-text); font-weight: 600">Verify our licence</a>
-</div>
-</div>
-<div class="wrap" style="padding-top: 12px">
-<header class="bar" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 32px; padding: 10px 12px 10px 20px; border-radius: 22px">
-<a href="#" aria-label="ROMA Overseas Manpower Inc., home" style="display: inline-flex; flex: none">
-<span class="only-light"><img src="assets/roma-logo.svg" alt="ROMA Overseas Manpower Inc." style="height: clamp(48px, 4.6vw, 66px); width: auto; display: block"></span>
-<span class="only-dark"><img src="assets/roma-logo-reverse.svg" alt="ROMA Overseas Manpower Inc." style="height: clamp(48px, 4.6vw, 66px); width: auto; display: block"></span>
-</a>
-<nav class="nav" aria-label="Main" style="display: flex; gap: clamp(18px, 2.4vw, 36px); flex: 1 1 auto; justify-content: center">
-<a href="#jobs">Jobs</a>
-<a href="#employers">For Employers</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-<div style="display: flex; align-items: center; gap: 10px; margin-left: auto">
-<a class="btn btn-gold hide-sm" href="#apply" style="min-height: 48px">Apply now</a>
-<button class="icon-btn menu-btn" type="button" data-action="menu" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
-<span class="ic-burger"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
-<span class="ic-close"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
-</button>
-</div>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-user-check" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2.5 20.5a6.5 6.5 0 0 1 13 0"/><path d="M16 11l2 2 4-4"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19h7.5a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h7.5"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.2L2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+  <symbol id="i-clipboard-check" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 13l2 2 4-4"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+</svg>
 
-<nav class="drop" hidden id="site-menu" aria-label="Mobile">
-<a class="dl" href="#jobs" data-action="close-menu">Jobs</a>
-<a class="dl" href="#employers" data-action="close-menu">For Employers</a>
-<a class="dl" href="#about" data-action="close-menu">About</a>
-<a class="dl" href="#contact" data-action="close-menu">Contact</a>
-<div style="display: flex; align-items: center; gap: 10px; padding: 10px 6px 4px">
-<a class="btn btn-gold" href="#apply" data-action="close-menu" style="flex: 1">Apply now</a>
-</div>
-</nav>
+<a class="skip-link" href="#main">Skip to content</a>
 
+<aside class="licence-bar" aria-label="Licence">
+  <div class="container licence-bar__inner">
+    <p class="licence-bar__text">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield-check"/></svg>
+      <span><span class="licence-bar__long">Licensed by the Department of Migrant Workers. </span>DMW Licence No. <span class="ph">[DMW LICENCE NO.]</span></span>
+    </p>
+    <a href="#">Verify our licence</a>
+  </div>
+</aside>
+
+<header class="site-header" id="site-header">
+  <div class="container site-header__bar">
+    <a class="site-header__logo" href="#top">
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="137 106 3670 1256" role="img" aria-labelledby="rl-t" focusable="false"><title id="rl-t">ROMA Overseas Manpower Inc., home</title><defs><linearGradient id="rl-g0" x1="525" x2="1253" y1="741.1" y2="741.1" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bb9423"/><stop offset="0" stop-color="#e2b910"/><stop offset=".1" stop-color="#fdd204"/><stop offset=".2" stop-color="#d6b449"/><stop offset=".3" stop-color="#be9d52"/><stop offset=".5" stop-color="#9c7737"/><stop offset=".5" stop-color="#9f7931"/><stop offset=".6" stop-color="#f4ca07"/><stop offset=".6" stop-color="#fcd205"/><stop offset=".8" stop-color="#daba55"/><stop offset="1" stop-color="#ceb88e"/><stop offset="1" stop-color="#c7b185"/><stop offset="1" stop-color="#a27f3f"/></linearGradient><linearGradient id="rl-g2" x1="1076.9" x2="1076.9" y1="148" y2="1000" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d723b"/><stop offset=".2" stop-color="#1d4a30"/><stop offset=".8" stop-color="#1d4a30"/><stop offset=".9" stop-color="#185633"/><stop offset="1" stop-color="#185633"/></linearGradient><linearGradient id="rl-g4" x1="22" x2="375" y1="426.1" y2="426.1" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9f7931"/><stop offset=".1" stop-color="#fdd304"/><stop offset=".3" stop-color="#d7b548"/><stop offset=".4" stop-color="#c09e52"/><stop offset=".5" stop-color="#9e7838"/><stop offset=".6" stop-color="#9d7733"/><stop offset=".7" stop-color="#fad004"/><stop offset=".8" stop-color="#d9b746"/><stop offset="1" stop-color="#c1a052"/><stop offset="1" stop-color="#ad8f4a"/></linearGradient><linearGradient id="rl-g5" x1="553.4" x2="598.9" y1="93.3" y2="218.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#116938"/><stop offset="1" stop-color="#1b5032"/></linearGradient><linearGradient id="rl-g6" x1="297" x2="617" y1="819.8" y2="819.8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#019043"/><stop offset=".8" stop-color="#0b7d3d"/><stop offset="1" stop-color="#157a3b"/></linearGradient><linearGradient id="rl-g7" x1="458" x2="881" y1="1033.3" y2="1033.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#029043"/><stop offset="1" stop-color="#176b38"/></linearGradient><linearGradient id="rl-g8" x1="1026.8" x2="768.2" y1="80" y2="790.4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#153522"/><stop offset="1" stop-color="#153522"/><stop offset="1" stop-color="#304629"/><stop offset="1" stop-color="#193723"/></linearGradient><linearGradient id="rl-g9" x1="671" x2="446.3" y1="859.2" y2="1047.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2d5232"/><stop offset="0" stop-color="#1d4a30"/><stop offset="1" stop-color="#1d492f"/></linearGradient><linearGradient id="rl-g10" x1="521" x2="787" y1="766.3" y2="766.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9f5e8"/><stop offset=".2" stop-color="#fff4c0"/><stop offset=".4" stop-color="#f8e8a9"/><stop offset=".6" stop-color="#e9d597"/><stop offset="1" stop-color="#c0a15e"/></linearGradient><linearGradient id="rl-g12" x1="641" x2="984" y1="625.9" y2="625.9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2a7d39"/><stop offset="0" stop-color="#1d783a"/><stop offset=".1" stop-color="#18763b"/><stop offset=".3" stop-color="#146e3a"/><stop offset=".9" stop-color="#185c35"/><stop offset="1" stop-color="#1c5a33"/><stop offset="1" stop-color="#245d34"/></linearGradient><linearGradient id="rl-g13" x1="755" x2="1053" y1="540.3" y2="540.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a4822b"/><stop offset="0" stop-color="#c09b1f"/><stop offset=".1" stop-color="#e5bd0e"/><stop offset=".1" stop-color="#f6cd06"/><stop offset=".1" stop-color="#f8d00a"/><stop offset=".2" stop-color="#d5b448"/><stop offset=".4" stop-color="#bd9c52"/><stop offset=".5" stop-color="#9a7534"/><stop offset=".6" stop-color="#fcd205"/><stop offset=".8" stop-color="#d6b448"/><stop offset=".9" stop-color="#bd9c52"/><stop offset="1" stop-color="#a27d39"/></linearGradient><linearGradient id="rl-g14" x1="1172.8" x2="1228" y1="945.2" y2="1096.9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b7974f"/><stop offset=".1" stop-color="#9c7737"/><stop offset=".1" stop-color="#9e7832"/><stop offset=".3" stop-color="#facf04"/><stop offset=".3" stop-color="#fcd206"/><stop offset=".5" stop-color="#ddba40"/><stop offset=".5" stop-color="#d5b34a"/><stop offset=".7" stop-color="#be9c52"/><stop offset=".8" stop-color="#9a7435"/><stop offset="1" stop-color="#9b7536"/></linearGradient><linearGradient id="rl-g15" x1="240.7" x2="169.3" y1="472.7" y2="596.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ab842b"/><stop offset=".1" stop-color="#f6cb06"/><stop offset=".1" stop-color="#fcd206"/><stop offset=".3" stop-color="#d7b548"/><stop offset=".4" stop-color="#be9d52"/><stop offset=".5" stop-color="#997334"/><stop offset=".9" stop-color="#987334"/><stop offset=".9" stop-color="#9c7736"/><stop offset="1" stop-color="#b39047"/><stop offset="1" stop-color="#bf9e50"/><stop offset="1" stop-color="#c1a051"/></linearGradient><linearGradient id="rl-g17" x1="361.5" x2="334.2" y1="484" y2="531.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ddba2b"/><stop offset=".2" stop-color="#d4b348"/><stop offset=".5" stop-color="#bf9d52"/><stop offset=".9" stop-color="#9b7535"/><stop offset="1" stop-color="#b48d27"/><stop offset="1" stop-color="#c29a20"/></linearGradient><linearGradient id="rl-g18" x1="1108.2" x2="1135.8" y1="978.7" y2="1001.9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1f3f26"/><stop offset="0" stop-color="#224026"/><stop offset="0" stop-color="#163824"/><stop offset=".1" stop-color="#1e3b24"/><stop offset=".1" stop-color="#153522"/><stop offset=".1" stop-color="#1b3a24"/><stop offset=".2" stop-color="#153622"/><stop offset="1" stop-color="#153522"/><stop offset="1" stop-color="#163622"/><stop offset="1" stop-color="#484f2a"/></linearGradient><linearGradient id="rl-sheen" x1="1235" x2="985" y1="360" y2="720" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".1" stop-color="#fff" stop-opacity=".4"/><stop offset=".2" stop-color="#fff" stop-opacity=".4"/><stop offset=".3" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".1"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/><stop offset=".8" stop-color="#fff" stop-opacity="0"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="rl-roma-gold" x1="0" x2="0" y1="381" y2="856" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d8b648"/><stop offset=".2" stop-color="#bd9c53"/><stop offset=".3" stop-color="#997334"/><stop offset=".5" stop-color="#ffd402"/><stop offset=".6" stop-color="#d7b549"/><stop offset=".8" stop-color="#bd9c53"/><stop offset="1" stop-color="#997334"/><stop offset="1" stop-color="#997334"/></linearGradient><radialGradient id="rl-g3" cx="575.2" cy="411.6" r="148.3" gradientUnits="userSpaceOnUse"><stop offset=".1" stop-color="#f5cc14"/><stop offset=".1" stop-color="#eec720"/><stop offset=".2" stop-color="#d9b84d"/><stop offset=".6" stop-color="#c8ab6b"/><stop offset=".9" stop-color="#ba9d6a"/><stop offset=".9" stop-color="#a68343"/><stop offset=".9" stop-color="#a17c3b"/><stop offset="1" stop-color="#9c7636"/><stop offset="1" stop-color="#8e7034"/></radialGradient><clipPath id="rl-gold-clip"><path d="m675.5 301.8 4.5 4.1a145 145 0 0 1 44.3 99.2A149 149 0 0 1 688 508.9l-1.3 1.5a128 128 0 0 1-23.6 21.8 153 153 0 0 1-110.7 27q-5.2-.9-10.4-2.2l-2.3-.5A143 143 0 0 1 489 533l-2.5-1.9a154 154 0 0 1-29.5-29.2l-1.8-2.3a151 151 0 0 1-27.1-111c5.3-32 20.3-59.5 42.9-82.7l1.9-2c53.5-56.7 147-51.3 202.6-2.1"/><path d="m764 308 91.5-.2h13.1l34.8-.1 35.8-.1h20l19-.1h6.9A273 273 0 0 1 1138 356l1.7 1.2a250 250 0 0 1 28 22.3 241 241 0 0 1 35.6 40.3c45.9 62.7 52.8 147.6 41.4 222.2a263 263 0 0 1-38.7 102l-1.4 2a239 239 0 0 1-57.6 61l-3.3 2.5a291 291 0 0 1-91.1 44.4l-2.6.8-9 2.3-2 .5a177 177 0 0 1-42.3 4.1l-6.7.1h-17.7l-18 .1-35.3.2 1.6 1.6 2.2 2.2 2.1 2.1q3.9 3.9 7.3 8.1 4.6 5.3 9.6 10.2l16.4 17.8 9.9 10.6 11.3 12.3 13.9 15.1 13.9 14.9 9.8 10.6 15.3 16.6 8.5 9.2 1.5 1.6 10.2 10.9q7.2 7.7 14.1 15.6 3.1 3.4 6.4 6.6l4.6 4.6 2.3 2.3 2.1 2.1 1.8 1.6c1.2 1.4 1.2 1.4 1.2 3.4l1.6.8c3.2 1.6 5.5 4 8.1 6.5a232 232 0 0 0 22.4 18.3l3.8 2.9c4.4 3.5 4.4 3.5 7.8 3.5 8.6-3.8 13.1-12.8 16.6-21.1 7.1-18.4 6.3-39.6 3.1-58.9-1-7.1-1-7.1.7-9.7l1.5-1.6 1.7-1.7 1.8-1.8 3.6-3.8 1.7-1.8 5.4-5.8q5-5.8 10.2-11.5c2-2.3 2-2.3 3.6-4.6l1.4-1.7h2l.8-1.7c1.6-3 3.8-4.9 6.2-7.3l3-4q3.6-4.8 8-9l7-8c5 4.6 8.7 10 12.6 15.6l2.1 3.1a390 390 0 0 1 21.4 34.5c26.7 45.7 40 97.8 27 150.3a133 133 0 0 1-27.1 53.5l-1.3 1.6a131 131 0 0 1-22.3 20.6c-38 28.8-84.4 38.1-131.4 31.8-40.3-6.2-77.5-24-107.5-51.7l-7.2-6.5q-7.5-6.6-14.3-13.7l-2.6-2.6-7.1-7.1-7.7-7.7-13.5-13.4-20-20.1-35.8-35.8-31.3-31.3-2.1-2.1-8.5-8.4-79-79.1-70.3-70.3-79-79-8.4-8.4-2.1-2.1-31.3-31.3-35.6-35.5-19.9-20-13.3-13.3-7.6-7.5-8.1-8.2-2.4-2.4-2.2-2.2-1.9-1.9C468 668 468 668 468 667h516c5.2-73.5 5.2-73.5-17.9-100.7a61 61 0 0 0-39-19.6h-19.7l-15-.1-15.6-.1-29.7-.1-33.7-.1-69.4-.3a82 82 0 0 1 8.1-15.8l8.2-14.5c28.8-49.9 32.6-112.5 18.4-167.5a227 227 0 0 0-12.3-35l-1.4-3zM390 319a56 56 0 0 1-2.8 9.9c-20 51-32.4 113-9.9 165.4A144 144 0 0 0 398 528l2.2 2.6q5.4 6.3 11.8 11.4v1h-3.1l-74.3.2-35.9.1-31.3.1-16.6.1-15.6.1h-15.8c-6.7.1-13.3 1.6-18.8 5.6-5.5 5.8-6.1 11.6-6.1 19.2l-.1 2.7-.1 8.3-.1 5.7-.2 13.9-32-.5-14.9-.2-14.4-.2-5.5-.1c-12.2-.1-22-1.9-33.2-7l-2.9-1.3-6.6-3.3-2.4-1.3A126 126 0 0 1 35 541l-1-1.7C15 507.4 12.5 467.5 21.2 432A149 149 0 0 1 56 370l1.8-2c26.7-28.3 70.3-46.5 108.8-48.2h6l7.1-.1 5.2-.1 14.3-.1 9-.1c60.6-.7 121.2-.5 181.8-.4"/></clipPath></defs><g id="roma-logo-art"><g transform="translate(140 110)"><circle cx="757.2" cy="579.7" r="564.1" fill="#153522"/><path fill="#ceac44" d="m675.5 301.8 4.5 4.1a145 145 0 0 1 44.3 99.2A149 149 0 0 1 688 508.9l-1.3 1.5a128 128 0 0 1-23.6 21.8 153 153 0 0 1-110.7 27q-5.2-.9-10.4-2.2l-2.3-.5A143 143 0 0 1 489 533l-2.5-1.9a154 154 0 0 1-29.5-29.2l-1.8-2.3a151 151 0 0 1-27.1-111c5.3-32 20.3-59.5 42.9-82.7l1.9-2c53.5-56.7 147-51.3 202.6-2.1"/><path fill="#ceac44" d="m764 308 91.5-.2h13.1l34.8-.1 35.8-.1h20l19-.1h6.9A273 273 0 0 1 1138 356l1.7 1.2a250 250 0 0 1 28 22.3 241 241 0 0 1 35.6 40.3c45.9 62.7 52.8 147.6 41.4 222.2a263 263 0 0 1-38.7 102l-1.4 2a239 239 0 0 1-57.6 61l-3.3 2.5a291 291 0 0 1-91.1 44.4l-2.6.8-9 2.3-2 .5a177 177 0 0 1-42.3 4.1l-6.7.1h-17.7l-18 .1-35.3.2 1.6 1.6 2.2 2.2 2.1 2.1q3.9 3.9 7.3 8.1 4.6 5.3 9.6 10.2l16.4 17.8 9.9 10.6 11.3 12.3 13.9 15.1 13.9 14.9 9.8 10.6 15.3 16.6 8.5 9.2 1.5 1.6 10.2 10.9q7.2 7.7 14.1 15.6 3.1 3.4 6.4 6.6l4.6 4.6 2.3 2.3 2.1 2.1 1.8 1.6c1.2 1.4 1.2 1.4 1.2 3.4l1.6.8c3.2 1.6 5.5 4 8.1 6.5a232 232 0 0 0 22.4 18.3l3.8 2.9c4.4 3.5 4.4 3.5 7.8 3.5 8.6-3.8 13.1-12.8 16.6-21.1 7.1-18.4 6.3-39.6 3.1-58.9-1-7.1-1-7.1.7-9.7l1.5-1.6 1.7-1.7 1.8-1.8 3.6-3.8 1.7-1.8 5.4-5.8q5-5.8 10.2-11.5c2-2.3 2-2.3 3.6-4.6l1.4-1.7h2l.8-1.7c1.6-3 3.8-4.9 6.2-7.3l3-4q3.6-4.8 8-9l7-8c5 4.6 8.7 10 12.6 15.6l2.1 3.1a390 390 0 0 1 21.4 34.5c26.7 45.7 40 97.8 27 150.3a133 133 0 0 1-27.1 53.5l-1.3 1.6a131 131 0 0 1-22.3 20.6c-38 28.8-84.4 38.1-131.4 31.8-40.3-6.2-77.5-24-107.5-51.7l-7.2-6.5q-7.5-6.6-14.3-13.7l-2.6-2.6-7.1-7.1-7.7-7.7-13.5-13.4-20-20.1-35.8-35.8-31.3-31.3-2.1-2.1-8.5-8.4-79-79.1-70.3-70.3-79-79-8.4-8.4-2.1-2.1-31.3-31.3-35.6-35.5-19.9-20-13.3-13.3-7.6-7.5-8.1-8.2-2.4-2.4-2.2-2.2-1.9-1.9C468 668 468 668 468 667h516c5.2-73.5 5.2-73.5-17.9-100.7a61 61 0 0 0-39-19.6h-19.7l-15-.1-15.6-.1-29.7-.1-33.7-.1-69.4-.3a82 82 0 0 1 8.1-15.8l8.2-14.5c28.8-49.9 32.6-112.5 18.4-167.5a227 227 0 0 0-12.3-35l-1.4-3zM390 319a56 56 0 0 1-2.8 9.9c-20 51-32.4 113-9.9 165.4A144 144 0 0 0 398 528l2.2 2.6q5.4 6.3 11.8 11.4v1h-3.1l-74.3.2-35.9.1-31.3.1-16.6.1-15.6.1h-15.8c-6.7.1-13.3 1.6-18.8 5.6-5.5 5.8-6.1 11.6-6.1 19.2l-.1 2.7-.1 8.3-.1 5.7-.2 13.9-32-.5-14.9-.2-14.4-.2-5.5-.1c-12.2-.1-22-1.9-33.2-7l-2.9-1.3-6.6-3.3-2.4-1.3A126 126 0 0 1 35 541l-1-1.7C15 507.4 12.5 467.5 21.2 432A149 149 0 0 1 56 370l1.8-2c26.7-28.3 70.3-46.5 108.8-48.2h6l7.1-.1 5.2-.1 14.3-.1 9-.1c60.6-.7 121.2-.5 181.8-.4"/><path fill="url(#rl-g0)" d="M797.6 305.8h24.3l11.2-.1h75.1l31.2-.1h42.4c20.4-.1 40.4 1.8 60.2 7l4.1 1.1a288 288 0 0 1 130.5 71.8q10.5 10 19.4 21.5l1.3 1.7q10.3 13.4 18.7 28.3l1.1 2a230 230 0 0 1 15.9 35l.8 2.2A270 270 0 0 1 1248 537l.3 2.4c9.3 76.8-5.3 157.7-51.6 220.6q-2.7 3.6-5.7 7l-2.7 3.2a226 226 0 0 1-34.9 34c-35.3 29.8-91 58.4-138.1 58h-13l-7-.1h-36.8L922 862l3.4 3.8 1.9 2.2q2.7 3 5.5 6l1.9 2.1 2 2.1 16.7 17.9 21.6 23.4 15.3 16.5 23.5 25.4 13.3 14.5a1027 1027 0 0 1 25.1 27.1l9.3 10 1.5 1.7 5.7 6c1.3 1.3 1.3 1.3 2.6 3.6 4.1 6.6 8.1 9.3 15.7 11.2l2 .5c-1 3-1.8 3.9-4 6l1.6.6c3.2 1.8 5.5 4.2 8.1 6.7 7.6 7.2 15.9 13.4 24.3 19.7l2 1.5c4.7 3.5 4.7 3.5 7.8 3.3 2.2-.8 2.2-.8 4.2-1.8l.5 1.9c3.3 10.4 11.2 14.4 20.4 19.3a140 140 0 0 0 21.1 8.8l2.9.9c20.1 5.4 40 1.6 57.9-8.5 12-7.3 22.7-17 28.4-30.1 1.8-3.3 1.8-3.3 4.9-4.5 2.9.2 2.9.2 4.9 2.2 5.7 34.9-3 76.4-23.4 105.5q-3.7 4.9-7.6 9.5l-1.4 1.5a127 127 0 0 1-20.6 19.5l-1.6 1.2c-38 28.8-84.5 38-131.4 31.8-40.3-6.2-77.5-24-107.5-51.7l-7.1-6.4q-7.6-7-14.7-14.4l-7.5-7.7-17.1-17.7-2.8-3c-7.5-7.9-7.5-7.9-12.2-8.5q-3.6.3-7.1 1.4l-.6-5.8c-1.2-6.4-4.5-9.7-8.9-14.1l-2.1-2.1-6.9-6.9-4.9-4.9-12.3-12.3-14.6-14.6-27.1-27.1-26.9-26.8-1.7-1.7-6.7-6.8-61.8-61.7-58.3-58.2-1.8-1.8-10.8-10.9-3.6-3.6-57.3-57.3-16.8-16.7-35.3-35.3-14.6-14.6-13.3-13.3-4.9-4.8-6.6-6.6-1.8-1.9a231 231 0 0 0-11.6-10.6q-8-7.4-15.7-15.2l-4.4-4.3-6.3-6.2-2-1.9-1.8-1.9-1.6-1.5c-1-1.6-1-1.6-.6-3.7l.6-1.9 59.8-.5a2558 2558 0 0 0 51.9-.4l12.8-.1h12.1l4.4-.1h9.5c2.5.1 2.5.1 3.5 1.1l5.6.1h146.8l50.8.1H961c24.8.1 24.8.1 34.5-6.2l1.8-1.2c27.4-17.9 48.8-41.5 56.7-73.8 4.4-21-1.9-44.3-13-62a86 86 0 0 0-50.2-33.6q-5.7-.7-11.6-.6h-11.5l-6.4-.1h-17.2l-18.1-.1-34.1-.2-38.9-.1-80-.3q.6-5.9 2.3-11.5l.7-2.5.8-2.5c3.4-11.4 5.5-22.8 7.2-34.5l.3-2.1a214 214 0 0 0-17.4-116.3l-1.2-2.4-1.1-2.1c-.8-2.7-.2-4.4.4-7.1 10.8-1.4 21.7-1.2 32.6-1.2M508 681q5.9 7 12.4 13.5l1.9 1.9 6.2 6.2 4.4 4.5 12.1 12 12.7 12.7 21.2 21.2 24.6 24.6 21.1 21.1 12.6 12.6 11.8 11.8 4.4 4.4c12.4 12.4 12.4 12.4 18.6 17.7q7 6.4 13.6 13.3l3.5 3.5 7.4 7.4 11.7 11.7 24.7 24.8 26.8 26.9 11.7 11.6 7.2 7.2 3.3 3.4 4.6 4.6 2.6 2.6c1.9 1.8 1.9 1.8 2.9 1.8 2.1-14.7-2.9-23.8-10-36.3q-5.4-10.1-10.4-20.5l-6.2-12.5-1.2-2.3-9.4-18.2q-7.4-14.1-14.4-28.4-5.4-11-11.1-21.7-9-17.1-17.6-34.5l-4.7-9.3-4.5-8.9-1.7-3.4-1.5-3-1.4-2.8c-.9-2.2-.9-2.2-.9-5.2 2.3-2.1 2.3-2.1 5.5-4.4l3.6-2.7 1.9-1.4q5-4 9.9-8l23.8-18.9 20.3-16.1q13.1-10.9 26.9-21.2l3.1-2.3v-1z"/><path fill="#1d492f" d="M752.5 37.7h8.9q40.4-.5 80.4 5.6l2 .3A594 594 0 0 1 886 52l3.5.9a527 527 0 0 1 154.2 64.7l4.7 2.8 6.4 4.1c.4.1.4.1 2 1.1 1.7 1.2 1.7 1.2 4.2 3.4.4 3.7-1 5.1-3.3 7.9l-2.9 3-1.5 1.5c-1.4 1.5-1.4 1.5-4.3 3.6-3.9-.3-6.1-1.5-9-4.1l-2.3-1.9-2.2-1.9-4.5-3.9-2-1.7a28 28 0 0 0-6-3.5l-2.4 2.5a159 159 0 0 1-25.3 21.8 291 291 0 0 1-33.8 20C875.2 217.8 772.7 235.1 651 251l3.3.5q13.1 2 25.8 6.2l3.1 1.1q13 4.6 24.8 11.2l3.5 1.9a218 218 0 0 1 39 27.8l8.1 6.9 2.9 2.5c2.5 1.9 2.5 1.9 4.6 2.3 1.9.6 1.9.6 3 2.2l.8 2 1 2.3.9 2.6 1.1 2.7a223 223 0 0 1 15.4 74.7v2.5c.5 50.6-11.8 93-37.5 136.5l-1.4 2.4-3.4 5.7h2.9l68.9-.1 33.4-.1 29-.1h35.2c9.2-.1 17.8.1 26.6 3.3v4l-3.4 1.2-12.9 4.6-5.5 2q-17.4 6.1-34.7 12.6l-43.4 15.7-10.3 3.6-15 5.4-41.6 15-6.1 2.2-55 19.8-36.9 13.2-6.6 2.4-19.6 7-8.1 2.9-5.5 2-3.4 1.2-2.9 1.1c-3.1 1.1-3.1 1.1-6.5 2.7-6.2 2.3-12.6 1.9-19.1 1.8l-4.3.1h-11.9l-12.4.1-23.4.1-26.6.1-54.9.2 1.4 1.4 14 13.8 5.2 5.2 7.5 7.4 2.4 2.4 2.2 2.2 2 1.9c1.3 1.7 1.3 1.7 1.3 4.7l-74.7 27.1-2.1.7-33.3 12-27.1 9.7-8.1 2.9-40.4 14.6-3.2 1.2-14.5 5.3-5 1.8-2.3.9c-5.1 1.8-5.1 1.8-7.3 1.8q6.3 37.5 26 70l1.2 2q7 11.8 15.5 22.8c1.3 2.2 1.3 2.2 1.1 4.2-1.3 3.4-4.1 5.7-6.7 8.3l-1.6 1.6c-4.1 4.1-4.1 4.1-7.5 4.1q-2.4-3-4.3-6l-1.3-1.9-2.7-4.1-3.9-6a549 549 0 0 1-25.3-42.3l-3-5.5A479 479 0 0 1 250 772l-.8-2.1A516 516 0 0 1 217 622l-.2-3.5c-.9-13.3-.9-26.6-.9-39.9v-28.9q.3-4 1.1-7.7l53.9-.4 25.1-.2q56-.4 112-.4l-2.5-2.5-3.3-3.2-1.6-1.7a93 93 0 0 1-10.2-11.6l-1.3-1.9c-27.6-39.6-28.9-88.7-21-134.7A401 401 0 0 1 388 320H283c1.1-7.9 1.1-7.9 3.9-12.4l1.8-3 1.9-3.1 2.1-3.4A567 567 0 0 1 342 230l3-3.6a392 392 0 0 1 46.1-47.7q3.7-3.2 7.2-6.6a377 377 0 0 1 18.3-15.3C490.6 97.3 579.4 58 699 40l2.4-.2c17.1-1.8 34-2.1 51.1-2.1M680 57.5l-8.6 1.4C583 73 498 108.8 406 179l-1.7 1.5a431 431 0 0 0-27.1 24c-16.8 15.6-16.8 15.6-24.2 24.3l-5.9 6.5q-12 13.2-22.8 27.4l-1.7 2.1c-9.6 12.6-9.6 12.6-9.6 15.2q15.4.2 30.6-1.5l2.4-.3a1090 1090 0 0 0 105.4-17.7 1791 1791 0 0 0 75.6-17.6A624 624 0 0 0 773 123l2.9-2.3a608 608 0 0 0 28.7-24.5l4.9-4.4q7.5-6.6 14.4-13.7l5.7-5.1q4.9-4.2 8.8-9.2c1.6-1.8 1.6-1.8 4.1-4.2C844 58 844 58 844 56l-12.8-1.4-3.6-.4c-19-2.1-38-2.4-57.1-2.4h-3.7c-29 0-58.2.9-86.8 5.7M479 300l-2.8 2.4q-9.6 8.4-17.2 18.6l-1.2 1.6A154 154 0 0 0 430 385l-.7 3.5a147 147 0 0 0 23.2 105.6q8.4 11.7 18.5 21.9l1.9 2.1A140 140 0 0 0 575 559.4h2c39.3-.2 75.8-16.2 103.8-43.8A147.8 147.8 0 0 0 687 315l-2-2.4q-6.4-7.4-14-13.6l-2.8-2.3A159 159 0 0 0 642 280l-1.8-1a135 135 0 0 0-46.2-14l-2.6-.3c-40.3-4.5-82 8.3-112.4 35.3"/><path fill="url(#rl-g2)" d="M1023.3 124.3c4.3 1.1 7.2 3.9 10.5 6.8l2.2 1.8 6 5.1 2.4 2 9.8 8.9 1.6 1.5 1.5 1.4q5.1 4.7 10.5 8.9 5.5 4.6 10.5 9.6 2.7 2.7 5.7 5.2 4.8 4.2 9.1 8.7l5.2 4.6q8.9 8 17.3 16.7l5.8 5.8c11.4 11.3 11.4 11.3 16.2 17.1l4.9 5.1q5.5 5.5 10.5 11.5l2.7 3.1 6.1 7.2 6.2 7.2c11.5 13.3 22.1 27.2 32.7 41.1l1.8 2.3 3.5 5.1c5-2 8-6.1 11.5-10 2.5-2 2.5-2 4.4-2 3 1.4 3.8 3.3 5.3 6.2l1.9 3.3 1.9 3.6 2 3.7c26 47.9 45.8 98.7 57 152.2l.6 3.1c18.9 92 12.4 187.2-64.6 385.9l-1.6 2.6q-14.4 24-31.4 46.4l-1.6 2a358 358 0 0 1-33.6 39.2q-4.4 4.2-8.3 8.8a198 198 0 0 1-23.5 23.2l-6.3 5.7q-9 8.4-18.7 16.1l-1.6 1.3-10.5 8.2-6.2 4.9-4.3 3.3-2 1.7c-4.7 3.6-4.7 3.6-8.1 3.7a57.8 57.8 0 0 1-9.6-8.2l-6.1-6.8q-5.3-6-10.9-11.9l-15.9-17.1-9.8-10.6-15.2-16.4-9.8-10.6q-7.8-8.2-15.3-16.6l-37-39.9-7.5-8.1-7.2-7.9-2.1-2.3c-3.9-4.3-3.9-4.3-3.9-7.7h3.8l36.3-.1h18.7l18.1-.1h6.8a165 165 0 0 0 47.3-6.8l2.7-.8A271 271 0 0 0 1163 791l4.1-3.6c8.2-7.1 15.2-14.9 21.9-23.4l2.3-2.9c48.4-60.9 62.1-142.4 54.1-218.2A283 283 0 0 0 1224 461l-1.1-2.4c-15-34.1-39.1-66-68.9-88.6l-1.6-1.3c-34-26-72.5-43.2-113.9-53.5l-3.3-.9a246 246 0 0 0-59.3-5.6l-6.9-.1-18.5.1h-19.4l-32.5.1h-45.9l-85.7.2v6c-5.4-.4-8.1-3.4-11.9-6.8l-4-3.6-2.1-1.8a229 229 0 0 0-34-24.8l-2.2-1.3a162 162 0 0 0-55.2-21.5l-2.2-.3-4.4-.7c-1.9-.3-1.9-.3-5-1.2-1-2-1-2-1-4 2.2-2.2 7-1.8 10-2.1l5.9-.7 3.2-.4c96.6-11.2 197.7-29.2 285.9-71.8l5.2-2.5c23.1-11.1 46-25 63.3-44.3 2.5-2.2 2.5-2.2 4.8-2.9"/><path fill="url(#rl-g3)" d="m674.4 298.8 9.6 9.1 1.6 1.5c24.1 22.5 38.2 59.4 39.5 91.7 1.2 42.8-10 81.8-39.9 113.5L681 519l-1.7 1.8A141 141 0 0 1 606 559l-2.8.5c-9.1 1.6-18 1.9-27.2 1.9h-2.3c-40.4-.2-77-15.8-105.9-44.2a150 150 0 0 1-42.2-105.8c.2-41.5 16.2-78.8 45.4-108.5 54.5-53.6 146.7-54.5 203.4-4.1"/><path fill="url(#rl-g4)" d="M261 311c2.5 1.1 4.3 2.3 6.4 4 4.6 3.1 9.8 2.6 15.2 2.5l3.5.1h11.5l8 .1h18.8l21.5.1 44.1.2c.8 3.7 1.1 5.7-.4 9.2l-1 2.4-1 2.6c-18.5 46.3-28.8 99.6-13.6 148.3 1 3.5 1 3.5 1 7.5h-2.7l-10.1.3h-4.4c-7.8.2-14.5.4-21.8 3.7-3.6-.2-6.4-.8-9.8-2a29 29 0 0 0-9.8-1.2h-8.3l-4.5.1h-9.8l-26 .1h-2.7q-30.3 0-60.4-.5l-4.9-.1-26.8-.4-.4 1.9c-.8 2.9-2 3.6-4.6 5.1-2.6.3-2.6.3-5.3.2h-2.8c-2.9-.2-2.9-.2-6.3-.9-8.5-.7-18.3 6.5-24.6 11.8a43 43 0 0 0-13.6 27.3c.5 11.4 8 20.5 16 28.2q6 5 12.5 9.2a34 34 0 0 1 11.9 15.8l1.2 2.7c3 6.4 3 6.4 3 8.7l-20.5-.1h-6.9a81 81 0 0 1-41.3-8.1l-6.8-3.4-2.4-1.3A126 126 0 0 1 35 541l-1-1.7C15 507.4 12.5 467.5 21.2 432A149 149 0 0 1 56 370l1.8-2c26-27.6 69.6-46.8 107.4-48.1l7.3.1h8.7l12.6.1 23.3.2 16.3.1 6.2.1 8.7.1h2.6c2.3 0 2.3 0 6.1-.6 1.5-2.4 1.5-2.4 2-5z"/><path fill="url(#rl-g5)" d="m838 53 2.7.3 5.3.7c.8 2.2.8 2.2 1 5a37 37 0 0 1-5.1 5.4c-6.4 6-6.4 6-9.1 9.4q-4 4.5-8.6 8.3-3.7 3.3-7.2 6.9-6.3 6.2-13 12l-3.3 2.9a481 481 0 0 1-29.3 24A417 417 0 0 1 743 149l-3 2a653 653 0 0 1-211 94l-2.5.6a1440 1440 0 0 1-156.4 31.8l-2.7.3a692 692 0 0 1-31 3.7q-12.7 1-25.4.6c-.8-2.3-1.2-3.5-.2-5.8l1.3-1.7 1.4-2.1 1.6-2.2 1.7-2.2q11.9-16 25.1-31.1l1.5-1.8q4.8-5.4 10.1-10.6 2.4-2.4 4.7-5.3 9.5-10.9 20.5-20.2l7.3-6.7q9.5-9 20-17.3l3.1-2.5A570 570 0 0 1 482 123l2.6-1.5C558.5 79.7 642.1 55.3 838 53"/><path fill="url(#rl-g6)" d="M510 706c2.5 2.1 2.5 2.1 5.3 4.9l1.5 1.5 5.2 5.2 3.7 3.7 10.1 10.1 8.5 8.4 19.8 19.9 20.6 20.5 17.6 17.6 10.5 10.5 9.9 9.9 3.6 3.6 4.9 4.9 2.8 2.8c2 2.5 2 2.5 2 6.5-2.5 1.5-2.5 1.5-6.2 3l-2 .8-6.7 2.7-4.9 2-10.6 4.2-17.2 7-24.7 10.1-34.4 14.1-9.3 3.7-37.3 15.3L458 909l-3.1 1.3-37.8 15.4-14.6 6-8.7 3.6-3 1.3-2.6 1-2.1.9c-2.7.6-4.5.3-7.1-.5-8-5.7-14.5-13.7-21-21l-2.3-2.5a231 231 0 0 1-20.2-25.1c-1.6-2.2-3-3.9-5-5.8q-4.6-5-8.3-10.9l-1.5-2.4a258 258 0 0 1-12.7-21.5l-2.8-5a179 179 0 0 1-17.3-48.9c-.8-3.9-1.2-7.1.1-10.9 1.9-1.3 1.9-1.3 4.5-2.2l2.9-1 3.2-1.1 3.2-1.1 6.9-2.4 9.2-3.3 14.9-5.4 13.6-4.8 7.3-2.6 43.5-15.7 2-.7 18.2-6.5 22.4-8.1 13.3-4.8 6.3-2.2q14.4-5.1 28.5-10.5l2-.7 8.7-3.4 2.9-1 2.4-1a8 8 0 0 1 6.1.5"/><path fill="url(#rl-g7)" d="m762.8 958.3 3.1 3.1 1.8 1.7 5.7 5.8 4.2 4.1 11.2 11.2 9.4 9.4 22 22.1 22.9 22.8 19.5 19.5 11.7 11.7 11 11 4 4 5.5 5.5 1.7 1.6c1.4 1.5 1.4 1.5 3.5 4.2-.1 2.3-.1 2.3-1 4-12 6.9-30.9 7.4-44.3 9.2l-3.5.5a528 528 0 0 1-66.5 3.6H781q-31.6.1-63-3.3l-2.3-.3c-83.9-9.8-173.3-34.2-258.7-110.1q-5.1-7.3-9.4-15.3l-1-1.9A28 28 0 0 1 443 970c1-1 1-1 3.6-1.1h5.5l4.3.1h16.9a2607 2607 0 0 0 266-12.3l7.1-.8 3.2-.4 2.8-.4c4.5-.2 6.8.3 10.4 3.2"/><path fill="url(#rl-g8)" d="m812 18 3.7.4C903.2 27.3 987 56.8 1074 112l2 1.4a500 500 0 0 1 74.4 61q2.6 2.5 5.5 4.9 5.8 5.3 10.9 11.2 3 3.4 6.2 6.4 5.7 6 10.7 12.3 3.2 3.8 6.5 7.4c5.9 6.4 11 13.3 16.1 20.2l4.8 6.3A449 449 0 0 1 1230 270l1.4 2.1q12.6 19.5 23.6 39.9l1.6 2.9c44.6 82.1 65.9 175.2 43.3 424.8A604 604 0 0 1 1260 839l-1.4 2.7c-12 24-26.1 48.7-43.2 69.5l-1.3 1.6-3.7 4.5-1.4 2.7c1.3 2.7 1.3 2.7 3 5-.9 3.5-3.1 5-6 7l-5.4 2.2A52 52 0 0 0 1179 955c-5.3-.4-7.8-3.2-11.4-6.8l-1.7-1.5c-3.9-3.9-3.9-3.9-4.1-7.2 1.6-3.3 3.6-5.4 6.1-8q8-8.5 14.9-17.9l6.1-7.8q15.6-20.7 29.1-42.8l1.2-1.9c44.9-72.6 72-156.9 79-280.3V578a529 529 0 0 0-24.2-157l-.7-2.2A521 521 0 0 0 1212 288l-1.3-2a583 583 0 0 0-43.5-57.9l-1.3-1.5a524 524 0 0 0-28.9-30.7l-5.3-5.3a252 252 0 0 0-20.9-19.5q-13.5-11.6-27.8-22.1l-1.9-1.4A560 560 0 0 0 1005 100l-2.6-1.4a503 503 0 0 0-226.8-57.8h-16.9l-2.2-.1a463 463 0 0 0-68.5 3.8A545 545 0 0 0 485 114l-2.9 1.7A532 532 0 0 0 442 142l-1.8 1.3L430 151l-1.6 1.3a532 532 0 0 0-37.8 32 330 330 0 0 0-31.9 31.8l-6.5 7q-7 7.8-13.4 16.3-2.7 3.6-5.7 7.1a527 527 0 0 0-45.9 68.4L284 320c-6.8 1.1-14.2 1.3-20-2.7-1.9-1.5-1.9-1.5-3-3.3.4-3.6 1.5-6.3 3.3-9.4l1.4-2.5 1.6-2.7 1.6-2.8a522 522 0 0 1 55.6-78.7l7.3-8.8q4.3-5.4 9.4-10.3 2.5-2.6 4.8-5.3 6.5-7.3 13.5-14.1l4.3-4.4q7.8-7.8 16.2-15l4.8-4.4q8-7 16.2-13.6l3.4-2.8C467.5 87.8 543.5 50.5 665 23l3.7-.6c46.8-7.9 96.1-9.5 143.3-4.4"/><path fill="url(#rl-g9)" d="M638 834c2.4 2 2.4 2 5 4.6l1.5 1.5 5 5 3.5 3.5 9.7 9.6 8 8 18.9 18.9 19.6 19.5 16.8 16.8 10 10 9.4 9.4 3.5 3.5 4.7 4.7 2.7 2.6c1.7 2.4 1.7 2.4 1.5 4.7l-.8 1.7a2517 2517 0 0 1-273.1 14.2h-22.1l-3.6-.1H455a54 54 0 0 1-9-1.1 101 101 0 0 0 19 32l2.3 2.8c5.8 6.5 11.9 11.9 18.7 17.2l2.9 2.4c63.4 50.4 151.1 72.8 293.8 84.8l3.4.1c37-.1 74-3 109.9-12.3 2.8-.7 2.8-.7 5-1 1.9 1.2 1.9 1.2 3 3-.1 2-.1 2-1 4-2.2 1-2.2 1-5.1 1.7l-3.3.8-3.7.9-3.8.9c-79.9 18.8-162.7 19.7-421.6-69.2q-12.1-7.5-23.5-16.1l-1.7-1.2-10.3-7.8-3.2-2.4a456 456 0 0 1-30.3-25.3l-4.7-4.2a458 458 0 0 1-20.1-19.3l-5.6-5.6a294 294 0 0 1-20-21.4 465 465 0 0 1-23.9-29.9l-1.6-2.2-1.6-1.8c-1-1.9-1-1.9-.8-3.9 1.5-3.6 4.4-6.1 7.1-8.8l1.8-1.9 1.7-1.7 1.6-1.6c1.6-1 1.6-1 3.7-.8 3 1.2 4.1 3.4 6 6a307 307 0 0 0 29.9 35.1l1.5 1.7 2.9 3.2c2.1 2.3 4 4 6.6 5.8 5-.3 9.4-2.2 14.1-4.1l2.3-1 7.9-3.2 5.6-2.3 12-4.9 18.1-7.4 24.5-10 25-10.2 64.2-26.2 5.4-2.2 2.7-1.1 17.1-7 11.8-4.9 5.6-2.2 5.2-2.2 5.1-2 12.8-5.4 2.6-1.2 4.9-2.2 2.3-.9 1.9-.9c2.5-.7 3.5-.4 5.9.5"/><path fill="url(#rl-g10)" d="M506 679h288l1 4c-1.1 1.5-1.1 1.5-2.9 2.8l-2 1.6-2.2 1.7-2.2 1.7-6.7 5.2-5.3 4.2-3.4 2.6-13.4 10.8q-8.6 7-17.6 13.8l-11.1 8.9-19.6 15.6-2.1 1.5-1.7 1.4q-2.8 1.8-5.8 3.2l10.8 21.7 5.1 10.1q9.5 19.5 19.7 38.8 6.3 12.2 12.4 24.3 5.6 11.6 11.6 22.8l12.4 24.2.9 1.9 6.5 13.1 6.6 13.2 2.6 5.3 1.6 3.2 1.4 2.8 3.1 5.3c1.5 2.6 1.6 3.9 1.4 6.9l-.2 2.6-.2 2.6-.2 2.7-.5 6.5c-1.7.8-1.7.8-4 1-2.4-1.8-2.4-1.8-5.1-4.5l-1.6-1.6-5-5.1-3.6-3.6-9.9-9.9-10.3-10.4-19.6-19.7-28.6-28.8-6.3-6.3-12.3-12.4-7.7-7.7-3.5-3.6c-10-10.1-10-10.1-14.3-13.7-6.8-5.8-12.9-12.2-19.2-18.5l-4.5-4.5-14.8-14.7-5.1-5.1-21.2-21.1-30.3-30.3-21.4-21.2-12.7-12.8-12-11.9-4.4-4.4-6-6-1.8-1.7c-1.6-1.6-1.6-1.6-3.8-4.5z"/><path fill="#153623" d="M218 541c1 1 1 1 1.1 3.2v6.3l-.1 3.7V566c-.3 45.4-.3 45.4 2 66l.2 2.1q3.6 33.3 10.8 65.9l.9 3.9A540 540 0 0 0 263 795l1.2 2.8c13 30.8 30 59.4 48.6 87q4.1 6 7.9 12.1t8.2 11.6l1.3 1.6q9 11.6 18.6 22.8l1.3 1.5a510 510 0 0 0 33.5 35.4 295 295 0 0 0 20.6 19.1q12.6 10.8 25.8 20.6l5.2 4.1c84.2 66.5 195.3 102.3 322 106.6h2.8c44.9-.1 91-4.8 134.3-17.5 7.8-2.3 7.8-2.3 11.7-.7 4 2.8 6.6 6 8.4 10.5q.8 5.3.6 10.5a621 621 0 0 1-109 20l-3.1.3q-13 .9-25.9.9h-17.8l-2.3.1c-22.4 0-44.6-.3-66.9-3.3l-4.1-.5A578 578 0 0 1 498 1082l-2.8-1.4a490 490 0 0 1-92.4-61.1l-7.7-6.3q-6.4-5.2-12.5-10.9l-6.3-5.5q-6.2-5.4-12-11.3l-2.1-2.1-4.4-4.4-6.7-6.6a227 227 0 0 1-19.3-21.1q-2.9-3.7-6.2-7.1A290 290 0 0 1 310 925l-1.6-2.1A606 606 0 0 1 256 840l-1.5-2.8c-36-68.8-55-145-60.8-226.5l-.1-2.2-.3-6c-.3-3.5-.3-3.5-.8-6.5q-.8-5.3-.7-10.8v-6.8l-.1-7v-4.5l-.1-2.1c.1-7.7 3-13.3 8.4-18.8 5.8-4.1 11-5.3 18-5"/><path fill="url(#rl-g12)" d="M940 548c11.2.5 19.4 8.5 27 16l1.9 1.9c16.5 17.4 19.5 40.6 19.3 63.6v6.3c-.1 26.7-.1 26.7-3.2 32.2-7.8 1.4-15.7 1.1-23.6 1.1H753l-132-.1-1-4a226 226 0 0 1 19.2-7.7l3-1.1 6.5-2.3 10.4-3.7 11.2-4 39-14 12.1-4.4 2-.7 4.1-1.5 6.2-2.2 28.8-10.3 36.2-13 18.3-6.6 64.4-23.3 5-1.8 2.4-.9 9.7-3.6 5.1-1.8 15.4-5.7 4.7-1.7 6.6-2.4 3.7-1.3c3-1 3-1 6-1z"/><path fill="url(#rl-g13)" d="M788.7 484.9H806l16.6.1h10.5l32.6.1 37.6.1 29.2.1 17.3.1h22.4c14.3 0 26.9 1.5 39.8 8.2l2 1.1a81 81 0 0 1 40 47.3c7 25.9 5.1 50.7-8.4 74.3q-11.1 18.2-27.6 31.7l-2.8 2.3q-9.1 7.4-19.3 13.3l-2.2 1.4-2.1 1.2-1.8 1c-1.8.8-1.8.8-5.8.8l.2-3.8c3.8-71 3.8-71-17.7-95.5L962 564l-1.9-2c-13.9-13.1-31.5-14.4-49.6-14.4l-5.5-.1h-14.7l-15.4-.1-29.3-.1-33.2-.1-68.4-.2c-1.1-3.7-1.1-3.7-.1-6.2l1.4-2.4 1.6-2.8 1.8-2.9 3.6-6.2 1.8-3.3q4.4-7.7 8.4-15.5l1.5-2.8q4-7.8 7.2-16c.8-1.9.8-1.9 1.8-2.9a83 83 0 0 1 15.7-1.1"/><path fill="url(#rl-g14)" d="M1209 925h3c1.6 1.8 1.6 1.8 3.4 4.3l1.9 2.9 2.1 3 2.2 3.2a473 473 0 0 1 21.5 34.8c16.9 28.8 28.7 58.1 30.9 91.8l-6-2-.6 2.4a71 71 0 0 1-36.4 35.6 88 88 0 0 1-68.8.4c-10.9-4.7-24.8-10.9-30.4-21.8-1-3.3-1.1-4.5.2-7.6l3.1-2.9c11.1-10.6 14.7-27.4 15.2-42.1.2-12.3-.3-23.9-2.3-36-2 0-2 0-5 2 .3-3.1.7-4.7 2.8-7l2.3-1.8q5.5-4.6 10.1-10.1 3-3.6 6.3-7 5.2-5.8 9.8-12a261 261 0 0 1 10.6-12.5 50 50 0 0 1 18.9-14c3.2-1.6 3.2-1.6 5.2-3.6"/><path fill="url(#rl-g15)" d="M171 486q3.9-.5 7.9-.5h70.2c5 0 7.2 1.2 10.9 4.5q4.1.6 8.2.6c7.6.2 7.6.2 9.8 2.4 2.3.6 2.3.6 5 1 4.8.8 4.8.8 7 3v3l3.4.3 3.6.7 1 3 2.8.2 3.2.8 2.6 5.3c2.5 3 6.1 3.3 9.8 4.1 3 .7 5.2 1.5 7.6 3.6l1 5c3.3 2.2 4.9 2.4 8.8 2.8A23 23 0 0 1 347 532a49 49 0 0 0 9.2 4.9l2.1.9c1.7 1.2 1.7 1.2 2.5 3.3l.2 1.9c-1 1-1 1-3.4 1.1h-15.2l-9.3-.1h-14.6l-41.5-.2h-22.9l-12.1-.1h-15.6c-9-.1-17.4 0-24.8 5.7-5.7 5.7-6.7 10.4-6.7 18.2v12.1q-.1 10.2 1.1 20.3l-3-1-5.6.3c-26.5 1.8-26.5 1.8-32.9-3.3a39 39 0 0 1-5.7-13.9c-1.2-4.3-2.4-6.1-6.2-8.5L138 571c-10.7-7.7-20.9-17.1-25-30a41 41 0 0 1 8.9-32.7c6.7-7.8 16.4-14 26.1-17.3q4.6-.2 9.2.4c8.4.9 8.4.9 11.8-1.4l.7-2.1z"/><path fill="#1d4a30" d="M1061.4 129.8q5.7 2.8 10.6 6.6l2.3 1.7a590 590 0 0 1 37.6 29.7l1.5 1.3a540 540 0 0 1 36.7 34.8q8.8 8.8 16.9 18.1l2.9 3.2q11.6 13.5 22.1 27.8l1.5 1.9q10.6 14.2 20.2 29.1l3.6 5.4 2 2.9 1.6 2.4c1.4 2.9 1.8 4.1 1.1 7.3a45 45 0 0 1-6.2 6.9l-1.7 1.8-1.8 1.7-1.5 1.6c-1.8 1-1.8 1-4.3.9-2.9-1.1-3.9-2-5.7-4.5l-1.7-2.2-1.8-2.5-1.8-2.4-3.8-5-7-9.2-2.4-3.2q-10.2-12.8-20.8-25.2l-4.4-5.1a534 534 0 0 0-26.2-29 787 787 0 0 0-23.8-24.6l-1.6-1.6q-8.1-8.4-16.8-16-2.7-2.3-5.2-4.9-4.5-4.5-9.3-8.6l-7-6.3q-6.7-5.9-13.6-11.5a51 51 0 0 1-7.6-7.1c.5-4.6 3.7-7.2 6.8-10.3l1.6-1.7c3.8-3.9 3.8-3.9 7-4.2"/><path fill="url(#rl-g17)" d="m254 486 27.5-.1 12.7-.1h27.4c3.5.2 6.1 1 9.4 2.2 2.7 0 2.7 0 5.3-.3l2.6-.3c2.1-.4 2.1-.4 3.1-1.4q12.6-1.4 25.3-1h2.1c2.8.1 5 .5 7.2 2.4 2.3 2.9 4 5.6 4.5 9.4a32 32 0 0 0 4.7 11.3l1 1.7a120 120 0 0 0 23.3 27.9l1.9 2.3c-.4 2.1-.4 2.1-1 4l-22 .2-7.5.1-10.7.1-3.4.1h-5.9c-3.2-.6-4.4-2.1-6.5-4.5l-5-2-3.3-2.4a41 41 0 0 0-21.2-8.1c-2.5-.5-2.5-.5-4.5-2.5l.2-2.4-.2-2.6c-4.6-3.3-10-3.9-15.5-4.9L303 514l-1-6c-3.6-1.4-3.6-1.4-7-2v-3l-9-1v-4l-2-.4-2.7-.5-2.6-.5c-2.7-.6-2.7-.6-5.1-1.6-4.1-1.6-8.2-1.4-12.5-1.6-3.4-.4-4.8-1-7.1-3.4z"/><path fill="url(#rl-g18)" d="M1161 939c4.9.5 7.5 4 10.8 7.2l1.9 1.8c4.2 4.2 4.2 4.2 4.5 7.5a32 32 0 0 1-6.8 8.8l-3.3 3.5-1.6 1.7-5.2 5.7-1.6 1.8-3.8 4.4a95 95 0 0 1-14.2 13.4q-4.7 3.9-9.1 8.1a280 280 0 0 1-17.6 15.1l-3.6 2.9-7.7 6.1a98 98 0 0 0-6.9 5.9c-7.1 6-7.1 6-11.7 6.3-7.2-1.5-13-6.1-17.1-12.2-.5-2.6-.5-2.6 0-5 1.6-1.8 1.6-1.8 4-3.6l2.8-2 3.2-2.4 7.8-5.8 2-1.5q8.7-6.7 17-13.9 4.4-3.8 9-7.5a142 142 0 0 0 12.1-11.2q2.8-2.8 5.9-5.3 13.8-12.3 25.6-26.4c1.3-1.5 1.3-1.5 3.6-3.4"/><g clip-path="url(#rl-gold-clip)"><path fill="url(#rl-sheen)" d="M985 300h280v570H985z"/></g></g><path fill="url(#rl-roma-gold)" d="M1757.2 637.5v126.3q0 36.6 4.5 46.1t15.8 15.1q11.3 5.7 42.2 5.7V843h-230.8v-12.3q31.2 0 42.4-5.8t15.6-15.2 4.5-45.9V471.2q0-36.6-4.5-46.1t-15.8-15.1-42.2-5.7V392h209.5q81.8 0 119.7 11.3T1980 445q24 30.5 24 71.4 0 49.9-36 82.5-22.9 20.6-64.2 30.9l108.5 152.7q21.3 29.6 30.2 36.9 13.7 10.3 31.6 11.3V843h-142l-145.3-205.5Zm0-221.2v197.5h18.9q46.3 0 69.2-8.4t36.1-30.6q13.1-22.2 13.1-57.7 0-51.6-24.1-76.2t-77.6-24.6Zm596.8-30.6q107.8-4 175.1 62.8 67.4 66.9 67.4 167.3 0 85.8-50.3 151-66.5 86.5-187.9 86.5-121.7 0-188.2-82.5-52.6-65.2-52.6-154.6 0-100.5 68.4-167.5 68.3-67 168.1-63m4 21.3q-61.9 0-94.1 63.2-26.3 51.8-26.3 149 0 115.4 40.6 170.6 28.2 38.6 79.1 38.6 34.3 0 57.2-16.7 29.3-21.3 45.6-68t16.3-121.9q0-89.4-16.6-133.8t-42.4-62.7T2358 407m605.5 282.3L3085.9 392h183.6v12.3h-14.7q-19.9 0-31.9 7-8.3 4.6-13.3 15.6-3.6 8-3.6 41.6v297.3q0 34.6 3.6 43.3 3.7 8.6 15 15.1t30.2 6.5h14.7V843H3034v-12.3h14.6q20 0 32-7 8.3-4.6 13.3-16 3.6-7.9 3.6-41.9V431.6L2924.6 843h-8L2741 434.6v317.6q0 33.3 1.7 40.9 4.3 16.6 18.7 27.1 14.5 10.5 45.4 10.5V843h-154.3v-12.3h4.7q14.9.3 27.9-4.8 13-5.2 19.6-13.8t10.3-24.3q.7-3.7.7-33.9V468.5q0-34.3-3.6-42.7-3.7-8.5-15-15t-30.3-6.5h-14.3V392h184.3Zm623.6 25.3h-159.3l-19 43.9q-9.3 22-9.3 36.3 0 18.9 15.3 27.9 9 5.3 44.2 8V843h-150v-12.3q24.3-3.7 39.9-20.1 15.7-16.5 38.6-68l161.3-359.9h6.4l162.6 369.8q23.3 52.6 38.2 66.2 11.3 10.3 32 12V843h-218.2v-12.3h9q26.2 0 36.9-7.3 7.3-5.3 7.3-15.3 0-6-2-12.3-.7-3-10-25Zm-11.3-24.6-67.2-155.3-69.2 155.3Z"/><path class="logo__sub" d="M1657.6 1063.7q-12.1 0-22.3-3.9-10.2-4-17.7-11.1t-11.7-16.7-4.2-21 4.2-21 11.7-16.7q7.5-7.2 17.7-11.1t22.2-3.9 22.3 3.9q10.1 3.9 17.6 11t11.7 16.7 4.2 21.1q0 11.4-4.2 21.1-4.2 9.6-11.7 16.7t-17.6 11-22.2 3.9m-.1-20q6.9 0 12.7-2.4 5.7-2.3 10.1-6.7t6.7-10.4 2.4-13.2-2.4-13.3q-2.4-5.9-6.7-10.3t-10.1-6.7q-5.8-2.4-12.7-2.4t-12.6 2.4q-5.8 2.4-10.1 6.7-4.4 4.4-6.8 10.4t-2.4 13.2 2.4 13.2 6.7 10.4q4.4 4.4 10.2 6.7 5.8 2.4 12.6 2.4m101.4 18.3-44.1-102h25.6l38.3 90.3h-14.9l39-90.3h23.4l-44 102Zm76.1 0V960h77v19h-53.6v64h55.6v19Zm21.7-42.6v-18.3h49.2v18.3Zm76.1 42.6V960h43.5q21.4 0 33.2 9.9t11.8 27.1q0 11.3-5.4 19.6-5.4 8.2-15.3 12.6-9.9 4.3-23.7 4.3h-31l10.6-10.2v38.7Zm64.9 0-25.6-37.1h25.3l25.8 37.1Zm-41.2-36.2-10.6-11.1h29.8q10.8 0 16.3-4.7t5.4-13q0-8.5-5.4-13.1-5.5-4.7-16.3-4.7h-29.8l10.6-11.2Zm117.2 37.9q-12.2 0-23.5-3.3-11.2-3.2-18.1-8.4l8-17.9q6.5 4.7 15.5 7.7t18.2 3q7.1 0 11.3-1.4t6.4-3.9q2-2.5 2-5.6 0-4.1-3.3-6.5t-8.5-4q-5.2-1.5-11.5-2.9-6.4-1.4-12.7-3.4-6.4-2-11.6-5.2-5.3-3.2-8.5-8.5t-3.2-13.5q0-8.6 4.7-15.8t14.2-11.5q9.6-4.3 24.1-4.3 9.5 0 18.9 2.3t16.5 6.7l-7.4 17.8q-7-4-14.2-5.9t-14-2q-6.9 0-11.2 1.6t-6.3 4.2q-1.9 2.6-1.9 5.8 0 4 3.2 6.5 3.2 2.4 8.5 3.8 5.2 1.5 11.6 2.9t12.7 3.3q6.3 2 11.5 5.1 5.3 3.2 8.5 8.5t3.3 13.2q0 8.6-4.8 15.8-4.7 7.1-14.3 11.5-9.6 4.3-24.1 4.3m59.8-1.7V960h77v19h-53.6v64h55.6v19Zm21.7-42.6v-18.3h49.2v18.3Zm63.6 42.6 45.5-102h23.3l45.6 102h-24.7l-37.4-90h9.4l-37.4 90Zm22.8-21.8 6.2-17.9h52.6l6.3 17.9Zm135.6 23.5q-12.2 0-23.5-3.3-11.2-3.2-18.1-8.4l8-17.9q6.5 4.7 15.5 7.7t18.2 3q7.1 0 11.3-1.4t6.4-3.9q2-2.5 2-5.6 0-4.1-3.3-6.5t-8.5-4q-5.2-1.5-11.5-2.9-6.4-1.4-12.7-3.4-6.4-2-11.6-5.2-5.3-3.2-8.5-8.5t-3.2-13.5q0-8.6 4.7-15.8t14.2-11.5q9.6-4.3 24.1-4.3 9.5 0 18.9 2.3t16.5 6.7l-7.4 17.8q-7-4-14.2-5.9t-14-2q-6.9 0-11.2 1.6t-6.3 4.2q-1.9 2.6-1.9 5.8 0 4 3.2 6.5 3.2 2.4 8.5 3.8 5.2 1.5 11.6 2.9t12.7 3.3q6.3 2 11.5 5.1 5.3 3.2 8.5 8.5t3.3 13.2q0 8.6-4.8 15.8-4.7 7.1-14.3 11.5-9.6 4.3-24.1 4.3m100.8-1.7V960h19.5l43.5 72h-10.3l42.6-72h19.5l.2 102h-22.1l-.2-68h4.1l-34.1 57.1h-10.6l-34.9-57.1h4.9v68Zm126.8 0 45.5-102h23.3l45.6 102h-24.7l-37.4-90h9.4l-37.4 90Zm22.8-21.8 6.2-17.9h52.6l6.3 17.9Zm102.1 21.8V960h19.5l60.2 73.5h-9.4V960h23.3v102h-19.5l-60.2-73.5h9.4v73.5Zm118.1 0V960h44.1q13.7 0 23.6 4.4t15.4 12.8q5.3 8.3 5.3 19.8 0 11.3-5.3 19.6-5.4 8.3-15.4 12.8t-23.6 4.5h-31l10.5-10.6v38.7Zm23.6-36.2-10.5-11.2h29.7q10.9 0 16.3-4.6 5.5-4.7 5.5-13 0-8.5-5.5-13.1-5.4-4.7-16.3-4.7h-29.7l10.5-11.2Zm133.2 37.9q-12.1 0-22.3-3.9-10.2-4-17.7-11.1t-11.7-16.7-4.2-21 4.2-21 11.7-16.7q7.5-7.2 17.7-11.1t22.2-3.9q12.1 0 22.3 3.9 10.1 3.9 17.6 11t11.7 16.7 4.2 21.1q0 11.4-4.2 21.1-4.2 9.6-11.7 16.7t-17.6 11-22.2 3.9m-.1-20q6.9 0 12.7-2.4 5.7-2.3 10.1-6.7t6.7-10.4q2.4-6 2.4-13.2 0-7.3-2.4-13.3-2.4-5.9-6.7-10.3t-10.1-6.7q-5.8-2.4-12.7-2.4t-12.6 2.4-10.1 6.7q-4.4 4.4-6.8 10.4t-2.4 13.2 2.4 13.2 6.7 10.4q4.4 4.4 10.2 6.7 5.8 2.4 12.6 2.4m94.4 18.3-33.4-102h24.4l29 90.3h-12.2L3137 960h21.9l29 90.3h-11.7L3206 960h22.5l-33.4 102h-25.3l-25.8-79.3h6.7l-26.4 79.3Zm143.6 0V960h77v19h-53.6v64h55.6v19Zm21.7-42.6v-18.3h49.2v18.3Zm76.6 42.6V960h43.5q21.4 0 33.2 9.9t11.8 27.1q0 11.3-5.4 19.6-5.4 8.2-15.3 12.6-9.9 4.3-23.7 4.3h-31l10.6-10.2v38.7Zm64.9 0-25.6-37.1h25.3l25.8 37.1Zm-41.2-36.2-10.6-11.1h29.8q10.8 0 16.3-4.7t5.4-13q0-8.5-5.4-13.1-5.5-4.7-16.3-4.7h-29.8l10.6-11.2Zm124.2 36.2V960h23.6v102Zm48.5 0V960h19.5l60.2 73.5h-9.4V960h23.3v102h-19.5l-60.2-73.5h9.4v73.5Zm166.9 1.7q-11.9 0-22-3.8-10.1-3.9-17.5-11t-11.6-16.7-4.2-21.2 4.2-21.2 11.6-16.7 17.6-11q10.1-3.8 22-3.8 13.2 0 24 4.6 10.7 4.6 18 13.4l-15.2 14q-5.2-5.9-11.6-9t-14.1-3q-7.1 0-13.1 2.4-5.9 2.3-10.3 6.7-4.4 4.3-6.8 10.4-2.4 6-2.4 13.2t2.4 13.2 6.8 10.4 10.3 6.7q6 2.4 13.1 2.4 7.7 0 14.1-3 6.4-3.1 11.6-9.1l15.2 14q-7.3 8.8-18 13.5-10.8 4.6-24.1 4.6m66.9-.6q-5.9 0-10-4-4.2-4-4.2-10.2 0-6.3 4.2-10.2 4.1-3.9 10-3.9t10 3.9 4.2 10.2-4.2 10.2q-4.1 4-10 4"/></g></svg>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul role="list">
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#employers">For Employers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <a class="btn btn--accent site-header__apply" href="#apply">Apply now</a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+        <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Main" hidden>
+    <div class="container">
+      <ul class="mobile-menu__list" role="list">
+        <li><a class="mobile-menu__link" href="#jobs">Jobs</a></li>
+        <li><a class="mobile-menu__link" href="#employers">For Employers</a></li>
+        <li><a class="mobile-menu__link" href="#about">About</a></li>
+        <li><a class="mobile-menu__link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu__cta"><a class="btn btn--accent btn--block" href="#apply">Apply now</a></div>
+    </div>
+  </nav>
 </header>
-</div>
-</div>
 
-<!-- Hero: light, text left, photo with floating doors right -->
-<section class="hero">
-<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden">
-<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
-<circle cx="1110" cy="470" r="380" fill="none" stroke="#D8B648" stroke-opacity=".38" stroke-width="1.5"></circle>
-<circle cx="1110" cy="470" r="470" fill="none" stroke="#D8B648" stroke-opacity=".2" stroke-width="1.5"></circle>
-<circle cx="1110" cy="470" r="560" fill="none" stroke="#009447" stroke-opacity=".12" stroke-width="1.5"></circle>
-</svg>
-</div>
-<div class="layer">
-<div class="hdr-space" aria-hidden="true"></div>
-<div id="main" class="wrap hero-grid" style="padding-block: clamp(20px, 3vw, 48px) clamp(32px, 4vw, 64px)">
-<div class="in" style="display: flex; flex-direction: column; gap: 20px">
-<h1 style="font-size: clamp(32px, 1.5rem + 2.4vw, 58px); line-height: 1.05; font-weight: 800; color: var(--ink)">The pillar of Filipinos for overseas recruitment</h1>
-<p style="font-size: clamp(16px, .95rem + .35vw, 19px); color: var(--ink-soft); max-width: 520px">Personalized support built on trust and integrity, from your application until the end of your contract.</p>
-<ul class="hero-trust" style="list-style: none; margin: 0; padding: 4px 0 0; display: flex; flex-direction: column; gap: 10px">
+<main id="main" tabindex="-1">
 
-<li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--ink)">
-<span style="flex: none; width: 26px; height: 26px; border-radius: 999px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Licensed by the Department of Migrant Workers
-</li>
+  <!-- Hero: one line on what ROMA does, then the two doors -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title">The pillar of Filipinos for overseas recruitment</h1>
+        <p class="hero__lead">Personalized support built on trust and integrity, from your application until the end of your contract.</p>
+        <div class="doors">
+          <a class="door door--applicant" href="#jobs">
+            <span class="door__label">For applicants</span>
+            <span class="door__q">Looking for work abroad?</span>
+            <span class="door__go"><span class="door__go-text">See open jobs</span><span class="door__arrow" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-arrow-right"/></svg></span></span>
+          </a>
+          <a class="door door--employer" href="#employers">
+            <span class="door__label">For employers</span>
+            <span class="door__q">Hiring Filipino workers?</span>
+            <span class="door__go"><span class="door__go-text">Send a job order</span><span class="door__arrow" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-arrow-right"/></svg></span></span>
+          </a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <picture>
+          <source type="image/webp" srcset="assets/img/hero-airport-800.webp 800w, assets/img/hero-airport-1200.webp 1200w, assets/img/hero-airport-1600.webp 1600w" sizes="(min-width: 1025px) 50vw, 100vw">
+          <img src="assets/img/hero-airport.jpg" width="1600" height="1068" alt="Travellers with luggage in a sunlit airport departure terminal" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+    </div>
+  </section>
 
-<li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--ink)">
-<span style="flex: none; width: 26px; height: 26px; border-radius: 999px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>A dedicated recruitment officer for every job order
-</li>
+  <div class="trust">
+    <ul class="container trust__list" role="list">
+      <li class="trust__item"><span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield-check"/></svg></span>Licensed by the Department of Migrant Workers</li>
+      <li class="trust__item"><span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user-check"/></svg></span>A dedicated recruitment officer for every job order</li>
+      <li class="trust__item"><span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-route"/></svg></span>Support from application to end of contract</li>
+    </ul>
+  </div>
 
-<li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--ink)">
-<span style="flex: none; width: 26px; height: 26px; border-radius: 999px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Support from application to end of contract
-</li>
+  <!-- Vacant positions: ticket cards in a swipeable row -->
+  <section class="section jobs" id="jobs" aria-labelledby="jobs-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="h2" id="jobs-title">Vacant positions</h2>
+          <p class="section-head__note"><span class="ph">[SAMPLE LISTINGS: replace with ROMA's current openings]</span></p>
+        </div>
+        <div class="carousel__controls">
+          <a class="btn btn--secondary" href="#">See all jobs</a>
+          <button class="icon-btn" type="button" aria-controls="jobs-track" aria-label="Previous jobs" data-carousel-prev disabled><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+          <button class="icon-btn" type="button" aria-controls="jobs-track" aria-label="Next jobs" data-carousel-next><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </div>
 
-</ul>
-</div>
-<div class="bento in d1">
-<div class="tile t-wide t-photo"><img src="assets/hero-airport.jpg" alt="Travellers with luggage in a sunlit airport departure terminal"></div>
-<a class="tile tile-door tile-gold card-link" href="#jobs">
-<span class="ring" style="background: #13261B; color: #D8B648"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
-<span style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 13px; font-weight: 700">For applicants</span>
-<span style="font-size: clamp(18px, .9rem + .5vw, 23px); font-weight: 800; line-height: 1.2">Looking for work abroad?</span>
-<span class="go" style="color: #13261B">See open jobs <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</span>
-</a>
-<a class="tile tile-door tile-green card-link" href="#employers">
-<span class="ring" style="background: #FFFFFF; color: #1D4A30"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"></path></svg></span>
-<span style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 13px; font-weight: 700; color: #E2C766">For employers</span>
-<span style="font-size: clamp(18px, .9rem + .5vw, 23px); font-weight: 800; line-height: 1.2">Hiring Filipino workers?</span>
-<span class="go" style="color: #FFFFFF">Send a job order <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</span>
-</a>
-<div class="tile t-photo"><img src="assets/job-nurse.jpg" alt="A smiling nurse in blue scrubs at a clinic door"></div>
-<div class="tile t-photo"><img src="assets/job-welder.jpg" alt="A welder in a protective mask working with sparks flying"></div>
-</div>
-</div>
-</div>
-</section>
+      <ul class="carousel__track" id="jobs-track" role="list">
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-nurse-480.webp 480w, assets/img/job-nurse-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-nurse.jpg" width="1200" height="800" alt="" loading="lazy" decoding="async">
+              </picture>
+              <span class="job__country"><span class="job__code">DE</span>Germany</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Healthcare</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Staff Nurse<span class="sr-only">, Germany</span></a></h3>
+              <p class="job__req">BS Nursing graduate with a PRC licence and at least one year of hospital experience.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>12</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-waiter-480.webp 480w, assets/img/job-waiter-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-waiter.jpg" width="1200" height="800" alt="" loading="lazy" decoding="async">
+              </picture>
+              <span class="job__country"><span class="job__code">QA</span>Qatar</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Hospitality</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Hotel Wait Staff<span class="sr-only">, Qatar</span></a></h3>
+              <p class="job__req">Two years of experience in a 4 or 5-star hotel or restaurant.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>6</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-welder-480.webp 480w, assets/img/job-welder-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-welder.jpg" width="800" height="1200" alt="" loading="lazy" decoding="async" style="object-position: 50% 35%">
+              </picture>
+              <span class="job__country"><span class="job__code">SA</span>Saudi Arabia</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Construction</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Welder<span class="sr-only">, Saudi Arabia</span></a></h3>
+              <p class="job__req">Three years of welding experience and an NC II certificate.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>20</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-engineer-480.webp 480w, assets/img/job-engineer-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-engineer.jpg" width="1200" height="800" alt="" loading="lazy" decoding="async">
+              </picture>
+              <span class="job__country"><span class="job__code">AE</span>United Arab Emirates</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Engineering</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Site Engineer<span class="sr-only">, United Arab Emirates</span></a></h3>
+              <p class="job__req">BS Civil Engineering with a PRC licence and five years of site experience.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>4</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-room-attendant-480.webp 480w, assets/img/job-room-attendant-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-room-attendant.jpg" width="1200" height="800" alt="" loading="lazy" decoding="async">
+              </picture>
+              <span class="job__country"><span class="job__code">AE</span>United Arab Emirates</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Hospitality</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Room Service Attendant<span class="sr-only">, United Arab Emirates</span></a></h3>
+              <p class="job__req">One year of hotel room service or food and beverage experience.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>8</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+        <li class="carousel__slide">
+          <article class="job">
+            <div class="job__media">
+              <picture>
+                <source type="image/webp" srcset="assets/img/job-construction-480.webp 480w, assets/img/job-construction-800.webp 800w" sizes="(min-width: 1600px) 25vw, (min-width: 1025px) 32vw, (min-width: 641px) 48vw, 84vw">
+                <img src="assets/img/job-construction.jpg" width="1200" height="798" alt="" loading="lazy" decoding="async">
+              </picture>
+              <span class="job__country"><span class="job__code">QA</span>Qatar</span>
+            </div>
+            <div class="job__body">
+              <span class="tag">Construction</span>
+              <h3 class="job__title"><a class="job__link" href="#job">Construction Worker<span class="sr-only">, Qatar</span></a></h3>
+              <p class="job__req">Two years of experience in rebar or general construction work.</p>
+            </div>
+            <div class="job__stub">
+              <p class="job__openings"><strong>30</strong> openings</p>
+              <span class="btn btn--accent btn--sm" aria-hidden="true">View and apply</span>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <p class="carousel__status" id="jobs-status" aria-live="polite">Showing 1 to 3 of 6</p>
+    </div>
+  </section>
 
-<!-- Vacant positions -->
-<section id="jobs" style="background: var(--bg); transition: background-color .35s ease">
-<div class="wrap" style="padding-block: clamp(64px, 8vw, 112px); display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<h2 style="font-size: clamp(30px, 1.3rem + 1.6vw, 48px); line-height: 1.1; font-weight: 800">Vacant positions</h2>
-<p style="color: var(--ink-soft)"><span class="ph">[SAMPLE LISTINGS: replace with ROMA's current openings]</span></p>
-</div>
-<div style="display: flex; align-items: center; gap: 10px">
-<a class="btn btn-ghost" href="#">See all jobs</a>
-<button class="sw-btn" type="button" data-action="prev" disabled aria-label="Previous jobs"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button>
-<button class="sw-btn" type="button" data-action="next" aria-label="Next jobs"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-</div>
-</div>
-<div class="track" id="job-track" tabindex="0" role="region" aria-label="Vacant positions. Swipe or use the arrows to see more.">
+  <!-- How it works for applicants: a route from Apply to Fly -->
+  <section class="section section--tint process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="process__head">
+        <h2 class="h2" id="process-title">From application to departure</h2>
+        <p class="process__intro">A dedicated recruitment officer tracks your progress, from application until the end of your contract.</p>
+      </div>
+      <figure class="process__photo">
+        <picture>
+          <source type="image/webp" srcset="assets/img/process-traveller-800.webp 800w, assets/img/process-traveller-1200.webp 1200w" sizes="(min-width: 1600px) 1680px, 92vw">
+          <img src="assets/img/process-traveller.jpg" width="1200" height="800" alt="A traveller with a shoulder bag walking through an airport terminal" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <ol class="route" role="list" data-route>
+        <li class="route__stop" style="--i: 0">
+          <span class="route__dot" aria-hidden="true">1</span>
+          <h3 class="route__title">Apply</h3>
+          <p class="route__text">Application form, initial documents, DMW pre-deployment requirements, review of qualifications and an initial interview.</p>
+        </li>
+        <li class="route__stop" style="--i: 1">
+          <span class="route__dot" aria-hidden="true">2</span>
+          <h3 class="route__title">Get matched</h3>
+          <p class="route__text">We send your CV to employers and set up your employer interview.</p>
+        </li>
+        <li class="route__stop" style="--i: 2">
+          <span class="route__dot" aria-hidden="true">3</span>
+          <h3 class="route__title">Get hired</h3>
+          <p class="route__text">You receive and accept the job offer.</p>
+        </li>
+        <li class="route__stop" style="--i: 3">
+          <span class="route__dot" aria-hidden="true">4</span>
+          <h3 class="route__title">Get ready</h3>
+          <p class="route__text">Visa processing, employment contract, training, pre-departure orientation seminar, medical exam and OEC from the DMW.</p>
+        </li>
+        <li class="route__stop" style="--i: 4">
+          <span class="route__dot" aria-hidden="true">5</span>
+          <h3 class="route__title">Fly</h3>
+          <p class="route__text">Flight booking and briefing, airport send-off, departure kit, and monitoring after you arrive.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-nurse.jpg" alt="A smiling nurse in blue scrubs at a clinic door">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Germany</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Healthcare</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Staff Nurse</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">BS Nursing graduate with a PRC licence and at least one year of hospital experience.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">12 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+  <!-- About: intro, mission and vision -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container about__grid">
+      <div class="about__intro">
+        <img class="about__mark" src="assets/logo/roma-icon.svg" width="88" height="82" alt="" loading="lazy" decoding="async">
+        <h2 class="h2" id="about-title">About ROMA</h2>
+        <p class="about__lead">ROMA Overseas Manpower Inc. connects Filipino talent with employers abroad, from our office in Makati City.</p>
+        <a class="btn btn--secondary" href="#about-page">Read our story</a>
+      </div>
+      <div class="about__statements">
+        <div class="statement">
+          <h3 class="statement__label">Mission</h3>
+          <p class="statement__text">We aim to promote the welfare and success of Filipino migrant workers through personalized support built on trust and integrity. We strive to be the partner of choice of our stakeholders by focusing on quality and streamlined service while ensuring compliance to global recruitment policies and standards.</p>
+        </div>
+        <div class="statement">
+          <h3 class="statement__label">Vision</h3>
+          <p class="statement__text">To be the pillar of Filipinos for overseas recruitment through innovative digitalization and integration of global trends. We provide meaningful opportunities that will uphold the highest value and dignity of our migrant workers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-waiter.jpg" alt="A waiter holding a tray in an elegant hotel restaurant">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Qatar</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Hospitality</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Hotel Wait Staff</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Two years of experience in a 4 or 5-star hotel or restaurant.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">6 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+  <!-- Core values: the four letters spell the name -->
+  <section class="values" aria-labelledby="values-title">
+    <div class="container">
+      <h2 class="values__title" id="values-title">Our core values</h2>
+      <ul class="values__grid" role="list">
+        <li class="value">
+          <span class="value__letter" aria-hidden="true">R</span>
+          <h3 class="value__name">Responsive</h3>
+          <p class="value__text">Recognizing the importance of each connection, we value our stakeholders by providing top-notch service all the time.</p>
+        </li>
+        <li class="value">
+          <span class="value__letter" aria-hidden="true">O</span>
+          <h3 class="value__name">Optimism</h3>
+          <p class="value__text">In delivering exceptional service and positive results. Committed in bridging Filipino talents with the right opportunities.</p>
+        </li>
+        <li class="value">
+          <span class="value__letter" aria-hidden="true">M</span>
+          <h3 class="value__name">Motivation</h3>
+          <p class="value__text">Embracing the unique quality of Filipinos to thrive for excellence and prioritize the common good for the benefit of all stakeholders.</p>
+        </li>
+        <li class="value">
+          <span class="value__letter" aria-hidden="true">A</span>
+          <h3 class="value__name">Accountability</h3>
+          <p class="value__text">Upholding the highest standard of honesty, transparency, and integrity in discharging our duties and responsibilities.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-welder.jpg" alt="A welder in a protective mask working with sparks flying">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Saudi Arabia</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Construction</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Welder</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Three years of welding experience and an NC II certificate.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">20 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+  <!-- For employers -->
+  <section class="section employers" id="employers" aria-labelledby="employers-title">
+    <div class="container">
+      <div class="employers__grid">
+        <div>
+          <h2 class="h2" id="employers-title">Why partner with ROMA</h2>
+          <ul class="points" role="list">
+            <li class="point">
+              <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clipboard-check"/></svg></span>
+              <p><strong>Commitment to quality and efficiency.</strong> Tailored manpower solutions aligned with your workforce needs. Each job order gets a customized hiring checklist and a dedicated recruitment officer.</p>
+            </li>
+            <li class="point">
+              <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trend"/></svg></span>
+              <p><strong>Continuous support and progress tracking.</strong> Dedicated recruitment officers follow every worker from application until the end of contract.</p>
+            </li>
+            <li class="point">
+              <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-tag"/></svg></span>
+              <p><strong>Competitive pricing.</strong> Rates designed to give employers the best return on investment without compromising on quality.</p>
+            </li>
+          </ul>
+          <div class="employers__cta">
+            <a class="btn btn--primary" href="#">Send a job order</a>
+            <a class="employers__email" href="mailto:amapa@roma-overseas.com">amapa@roma-overseas.com</a>
+          </div>
+        </div>
+        <figure class="employers__photo">
+          <picture>
+            <source type="image/webp" srcset="assets/img/employers-handshake-640.webp 640w, assets/img/employers-handshake-1200.webp 1200w" sizes="(min-width: 901px) 46vw, 92vw">
+            <img src="assets/img/employers-handshake.jpg" width="1200" height="801" alt="Two business partners shaking hands across an office desk" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-engineer.jpg" alt="Two site engineers in hard hats reviewing plans on a construction site">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>United Arab Emirates</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Engineering</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Site Engineer</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">BS Civil Engineering with a PRC licence and five years of site experience.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">4 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+      <div class="accred">
+        <h3 class="accred__title">Employer accreditation in two steps</h3>
+        <ol class="accred__steps" role="list">
+          <li class="accred__step">
+            <span class="accred__num" aria-hidden="true">1</span>
+            <div>
+              <h4>MWO accreditation</h4>
+              <p>Submit your documents to the Migrant Workers Office of the hiring country for attestation.</p>
+            </div>
+          </li>
+          <li class="accred__step">
+            <span class="accred__num" aria-hidden="true">2</span>
+            <div>
+              <h4>DMW accreditation</h4>
+              <p>Once released, ROMA processes the documents with the Department of Migrant Workers.</p>
+            </div>
+          </li>
+        </ol>
+        <details class="checklist">
+          <summary>See the full document checklist <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"/></svg></summary>
+          <div class="checklist__body">
+            <div>
+              <h4 class="checklist__heading">Step 1: for MWO attestation</h4>
+              <ul class="checklist__list" role="list">
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Recruitment agreement</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Manpower request</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Special power of attorney</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Master employment contract</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Contingency plan</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Letter of visa guarantee</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Affidavit of undertaking</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Company trade licence</li>
+                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>ID of company owner</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="checklist__heading">Step 2: DMW accreditation</h4>
+              <p class="checklist__note">Once released by the MWO, the documents are sent to ROMA Inc. and processed in the DMW, with adjudication clearance if applicable.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-room-attendant.jpg" alt="A hotel room-service attendant at a guest door">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>United Arab Emirates</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Hospitality</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Room Service Attendant</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">One year of hotel room service or food and beverage experience.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">8 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+  <!-- Contact -->
+  <section class="section section--tint contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact__grid">
+      <div>
+        <h2 class="h2" id="contact-title">Visit or contact us</h2>
+        <ul class="contact__list" role="list">
+          <li class="contact__item">
+            <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg></span>
+            <address>2nd Floor New Building, La Fuerza Compound, 2241 Chino Roces Ave., Brgy. Bangkal, Makati City, Metro Manila, Philippines 1233</address>
+          </li>
+          <li class="contact__item">
+            <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
+            <div>
+              <p><span class="contact__label">Applicants:</span> <a href="mailto:apply@roma-overseas.com">apply@roma-overseas.com</a></p>
+              <p><span class="contact__label">Employers:</span> <a href="mailto:amapa@roma-overseas.com">amapa@roma-overseas.com</a></p>
+            </div>
+          </li>
+          <li class="contact__item">
+            <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>
+            <p><span class="ph">[PHONE / VIBER]</span></p>
+          </li>
+          <li class="contact__item">
+            <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg></span>
+            <p><span class="ph">[OFFICE HOURS]</span></p>
+          </li>
+        </ul>
+      </div>
+      <div class="map">
+        <div class="map__frame">
+          <iframe title="Map of La Fuerza Plaza, Makati City" src="https://maps.google.com/maps?q=La%20Fuerza%20Plaza%2C%202241%20Chino%20Roces%20Ave%2C%20Makati&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map__bar">
+          <p class="map__place"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg>La Fuerza Plaza, Makati City</p>
+          <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=La+Fuerza+Plaza+2241+Chino+Roces+Ave+Makati" target="_blank" rel="noopener">Get directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a class="card card-link slide" href="#job" style="flex-direction: column">
-<div class="job-img">
-<img src="assets/job-construction.jpg" alt="Construction workers in hard hats tying steel bars">
-<span class="chip glass-dark"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Qatar</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1">
-<span class="pill" style="align-self: flex-start">Construction</span>
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Construction Worker</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Two years of experience in rebar or general construction work.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line)">
-<span style="font-weight: 700; color: var(--gold-text); font-size: 15px">30 openings</span>
-<span class="btn btn-primary" style="min-height: 44px; padding: 0 22px">View and apply</span>
-</div>
-</div>
-</a>
+</main>
 
-</div>
-<div style="display: flex; justify-content: center; gap: 2px">
-
-<button class="dot on" type="button" data-go="0" aria-label="Go to job 1"></button>
-
-<button class="dot" type="button" data-go="1" aria-label="Go to job 2"></button>
-
-<button class="dot" type="button" data-go="2" aria-label="Go to job 3"></button>
-
-<button class="dot" type="button" data-go="3" aria-label="Go to job 4"></button>
-
-<button class="dot" type="button" data-go="4" aria-label="Go to job 5"></button>
-
-<button class="dot" type="button" data-go="5" aria-label="Go to job 6"></button>
-
-</div>
-</div>
-</section>
-
-<!-- How it works -->
-<section style="background: var(--bg-tint); transition: background-color .35s ease">
-<div class="wrap" style="padding-block: clamp(64px, 8vw, 112px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: clamp(36px, 5vw, 72px); align-items: stretch">
-<div class="media" style="min-height: 520px; box-shadow: var(--shadow)">
-<img src="assets/process-traveller.jpg" alt="A traveller with a shoulder bag walking through an airport terminal" style="position: absolute; inset: 0">
-<div class="glass-dark" style="position: absolute; left: 20px; right: 20px; bottom: 20px; border-radius: 20px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start">
-<svg aria-hidden="true" style="flex: none; margin-top: 2px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D8B648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
-<p style="font-weight: 600; font-size: 16px">A dedicated recruitment officer tracks your progress, from application until the end of your contract.</p>
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 28px; justify-content: center">
-<h2 style="font-size: clamp(30px, 1.3rem + 1.6vw, 48px); line-height: 1.1; font-weight: 800">From application to departure</h2>
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px">
-
-<li style="display: flex; gap: 18px">
-<div style="display: flex; flex-direction: column; align-items: center; flex: none">
-<span style="width: 44px; height: 44px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px">1</span>
-<span style="width: 2px; flex: 1; min-height: 16px; background: var(--line-strong); margin-block: 4px"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 18px">
-<h3 style="font-size: 19px; font-weight: 700; line-height: 1.3; padding-top: 9px">Apply</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Application form, initial documents, DMW pre-deployment requirements, review of qualifications and an initial interview.</p>
-</div>
-</li>
-
-<li style="display: flex; gap: 18px">
-<div style="display: flex; flex-direction: column; align-items: center; flex: none">
-<span style="width: 44px; height: 44px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px">2</span>
-<span style="width: 2px; flex: 1; min-height: 16px; background: var(--line-strong); margin-block: 4px"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 18px">
-<h3 style="font-size: 19px; font-weight: 700; line-height: 1.3; padding-top: 9px">Get matched</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">We send your CV to employers and set up your employer interview.</p>
-</div>
-</li>
-
-<li style="display: flex; gap: 18px">
-<div style="display: flex; flex-direction: column; align-items: center; flex: none">
-<span style="width: 44px; height: 44px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px">3</span>
-<span style="width: 2px; flex: 1; min-height: 16px; background: var(--line-strong); margin-block: 4px"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 18px">
-<h3 style="font-size: 19px; font-weight: 700; line-height: 1.3; padding-top: 9px">Get hired</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">You receive and accept the job offer.</p>
-</div>
-</li>
-
-<li style="display: flex; gap: 18px">
-<div style="display: flex; flex-direction: column; align-items: center; flex: none">
-<span style="width: 44px; height: 44px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px">4</span>
-<span style="width: 2px; flex: 1; min-height: 16px; background: var(--line-strong); margin-block: 4px"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 18px">
-<h3 style="font-size: 19px; font-weight: 700; line-height: 1.3; padding-top: 9px">Get ready</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Visa processing, employment contract, training, pre-departure orientation seminar, medical exam and OEC from the DMW.</p>
-</div>
-</li>
-
-<li style="display: flex; gap: 18px">
-<div style="display: flex; flex-direction: column; align-items: center; flex: none">
-<span style="width: 44px; height: 44px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px">5</span>
-<span style="width: 2px; flex: 1; min-height: 16px; background: var(--line-strong); margin-block: 4px"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 18px">
-<h3 style="font-size: 19px; font-weight: 700; line-height: 1.3; padding-top: 9px">Fly</h3>
-<p style="color: var(--ink-soft); font-size: 15.5px">Flight booking and briefing, airport send-off, departure kit, and monitoring after you arrive.</p>
-</div>
-</li>
-
-</ol>
-</div>
-</div>
-</section>
-
-<!-- About: sticky left, values scroll on the right -->
-<section id="about" class="about-abs">
-<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden">
-<svg viewBox="0 0 1440 1600" preserveAspectRatio="xMidYMin slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
-<defs><clipPath id="abt-disc"><circle cx="300" cy="380" r="280"></circle></clipPath></defs>
-<circle cx="300" cy="380" r="280" fill="#1D4A30" fill-opacity=".05"></circle>
-<g clip-path="url(#abt-disc)" opacity=".35">
-<path d="M0 600 L700 330 L700 440 L0 710 Z" fill="#009447" fill-opacity=".55"></path>
-<path d="M0 780 L700 510 L700 580 L0 850 Z" fill="#009447" fill-opacity=".35"></path>
-<path d="M0 380 L700 110 L700 180 L0 450 Z" fill="#009447" fill-opacity=".25"></path>
-</g>
-<circle cx="300" cy="380" r="280" fill="none" stroke="#D8B648" stroke-opacity=".32" stroke-width="2"></circle>
-<circle cx="300" cy="380" r="370" fill="none" stroke="#D8B648" stroke-opacity=".14" stroke-width="1.5"></circle>
-<circle cx="300" cy="380" r="460" fill="none" stroke="#D8B648" stroke-opacity=".07" stroke-width="1.5"></circle>
-<circle cx="1380" cy="1500" r="420" fill="none" stroke="#D8B648" stroke-opacity=".12" stroke-width="2"></circle>
-<circle cx="1380" cy="1500" r="300" fill="none" stroke="#009447" stroke-opacity=".16" stroke-width="40"></circle>
-</svg>
-</div>
-<div class="wrap layer" style="padding-block: clamp(80px, 10vw, 144px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: clamp(40px, 6vw, 96px); align-items: start">
-<div class="about-sticky" style="display: flex; flex-direction: column; gap: 22px">
-<img src="assets/roma-icon.svg" alt="" style="width: clamp(96px, 9vw, 132px); height: auto">
-<h2 style="font-size: clamp(40px, 2rem + 2.6vw, 76px); line-height: 1.02; font-weight: 800">About ROMA</h2>
-<span aria-hidden="true" style="width: 72px; height: 4px; border-radius: 4px; background: #D8B648"></span>
-<p style="color: var(--ink-soft); font-size: clamp(17px, 1rem + .4vw, 20px); max-width: 460px">ROMA Overseas Manpower Inc. connects Filipino talent with employers abroad, from our office in Makati City.</p>
-<div style="padding-top: 6px"><a class="btn btn-ghost" href="#about-page">Read our story</a></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 20px">
-<a class="frost card-link" href="#about-page" style="border-radius: 26px; padding: clamp(26px, 3vw, 40px); flex-direction: column; gap: 12px">
-<h3 style="font-size: 15px; font-weight: 800; color: var(--gold-text); letter-spacing: .02em">Mission</h3>
-<p style="color: var(--ink); font-size: clamp(16px, .95rem + .3vw, 18.5px); line-height: 1.65">We aim to promote the welfare and success of Filipino migrant workers through personalized support built on trust and integrity. We strive to be the partner of choice of our stakeholders by focusing on quality and streamlined service while ensuring compliance to global recruitment policies and standards.</p>
-</a>
-<a class="frost card-link" href="#about-page" style="border-radius: 26px; padding: clamp(26px, 3vw, 40px); flex-direction: column; gap: 12px">
-<h3 style="font-size: 15px; font-weight: 800; color: var(--gold-text); letter-spacing: .02em">Vision</h3>
-<p style="color: var(--ink); font-size: clamp(16px, .95rem + .3vw, 18.5px); line-height: 1.65">To be the pillar of Filipinos for overseas recruitment through innovative digitalization and integration of global trends. We provide meaningful opportunities that will uphold the highest value and dignity of our migrant workers.</p>
-</a>
-<h3 style="font-size: clamp(24px, 1.1rem + 1vw, 34px); font-weight: 800; padding-top: clamp(24px, 3vw, 40px)">Our core values</h3>
-
-<a class="vrow letter" href="#about-page">
-<span class="vletter" aria-hidden="true">R</span>
-<span class="frost card-link" style="border-radius: 24px; padding: 26px 26px 26px clamp(56px, 5vw, 76px); flex-direction: column; gap: 8px; flex: 1">
-<span style="font-size: 20px; font-weight: 800">Responsive</span>
-<span style="color: var(--ink-soft); font-size: 15.5px; line-height: 1.6">Recognizing the importance of each connection, we value our stakeholders by providing top-notch service all the time.</span>
-</span>
-</a>
-
-<a class="vrow letter" href="#about-page">
-<span class="vletter" aria-hidden="true">O</span>
-<span class="frost card-link" style="border-radius: 24px; padding: 26px 26px 26px clamp(56px, 5vw, 76px); flex-direction: column; gap: 8px; flex: 1">
-<span style="font-size: 20px; font-weight: 800">Optimism</span>
-<span style="color: var(--ink-soft); font-size: 15.5px; line-height: 1.6">In delivering exceptional service and positive results. Committed in bridging Filipino talents with the right opportunities.</span>
-</span>
-</a>
-
-<a class="vrow letter" href="#about-page">
-<span class="vletter" aria-hidden="true">M</span>
-<span class="frost card-link" style="border-radius: 24px; padding: 26px 26px 26px clamp(56px, 5vw, 76px); flex-direction: column; gap: 8px; flex: 1">
-<span style="font-size: 20px; font-weight: 800">Motivation</span>
-<span style="color: var(--ink-soft); font-size: 15.5px; line-height: 1.6">Embracing the unique quality of Filipinos to thrive for excellence and prioritize the common good for the benefit of all stakeholders.</span>
-</span>
-</a>
-
-<a class="vrow letter" href="#about-page">
-<span class="vletter" aria-hidden="true">A</span>
-<span class="frost card-link" style="border-radius: 24px; padding: 26px 26px 26px clamp(56px, 5vw, 76px); flex-direction: column; gap: 8px; flex: 1">
-<span style="font-size: 20px; font-weight: 800">Accountability</span>
-<span style="color: var(--ink-soft); font-size: 15.5px; line-height: 1.6">Upholding the highest standard of honesty, transparency, and integrity in discharging our duties and responsibilities.</span>
-</span>
-</a>
-
-</div>
-</div>
-</section>
-
-<!-- Employers -->
-<section id="employers" style="background: var(--bg-tint); transition: background-color .35s ease">
-<div class="wrap" style="padding-block: clamp(64px, 8vw, 112px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: clamp(40px, 5vw, 80px); align-items: center">
-<div style="display: flex; flex-direction: column; gap: 26px">
-<h2 style="font-size: clamp(30px, 1.3rem + 1.6vw, 48px); line-height: 1.1; font-weight: 800">Why partner with ROMA</h2>
-<div style="display: flex; flex-direction: column; gap: 20px">
-
-<div style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 38px; height: 38px; border-radius: 12px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
-<p style="color: var(--ink-soft)"><strong style="color: var(--ink)">Commitment to quality and efficiency.</strong> Tailored manpower solutions aligned with your workforce needs. Each job order gets a customized hiring checklist and a dedicated recruitment officer.</p>
-</div>
-
-<div style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 38px; height: 38px; border-radius: 12px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
-<p style="color: var(--ink-soft)"><strong style="color: var(--ink)">Continuous support and progress tracking.</strong> Dedicated recruitment officers follow every worker from application until the end of contract.</p>
-</div>
-
-<div style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 38px; height: 38px; border-radius: 12px; background: var(--pill); color: var(--pill-ink); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
-<p style="color: var(--ink-soft)"><strong style="color: var(--ink)">Competitive pricing.</strong> Rates designed to give employers the best return on investment without compromising on quality.</p>
-</div>
-
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; padding-top: 6px">
-<a class="btn btn-primary" href="#">Send a job order</a>
-<a href="mailto:amapa@roma-overseas.com" style="font-weight: 600">amapa@roma-overseas.com</a>
-</div>
-</div>
-<div style="display: flex; flex-direction: column">
-<div class="media" style="aspect-ratio: 4 / 3; box-shadow: var(--shadow)">
-<img src="assets/employers-handshake.jpg" alt="Two business partners shaking hands across an office desk">
-</div>
-<a class="frost card-link" href="#checklist" style="position: relative; margin: -120px clamp(12px, 3vw, 32px) 0; border-radius: 24px; padding: clamp(22px, 2.6vw, 32px); flex-direction: column; gap: 18px">
-<h3 style="font-size: 20px; font-weight: 800">Employer accreditation in two steps</h3>
-<div style="display: flex; gap: 14px">
-<span style="flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--brand); color: var(--brand-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800">1</span>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<h4 style="font-size: 16.5px; font-weight: 700">MWO accreditation</h4>
-<p style="color: var(--ink-soft); font-size: 15px">Submit your documents to the Migrant Workers Office of the hiring country for attestation.</p>
-</div>
-</div>
-<div style="display: flex; gap: 14px">
-<span style="flex: none; width: 40px; height: 40px; border-radius: 12px; background: #D8B648; color: #13261B; display: inline-flex; align-items: center; justify-content: center; font-weight: 800">2</span>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<h4 style="font-size: 16.5px; font-weight: 700">DMW accreditation</h4>
-<p style="color: var(--ink-soft); font-size: 15px">Once released, ROMA processes the documents with the Department of Migrant Workers.</p>
-</div>
-</div>
-<span class="go">See the full document checklist <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</a>
-</div>
-</div>
-</section>
-
-<!-- Contact -->
-<section id="contact" style="background: var(--bg); transition: background-color .35s ease">
-<div class="wrap" style="padding-block: clamp(64px, 8vw, 112px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px; align-items: stretch">
-<div class="card" style="padding: clamp(26px, 3vw, 44px); display: flex; flex-direction: column; gap: 26px">
-<h2 style="font-size: clamp(30px, 1.3rem + 1.6vw, 44px); line-height: 1.1; font-weight: 800">Visit or contact us</h2>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; gap: 14px">
-<svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" class="ic-gold" stroke="#7E5E27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
-<p>2nd Floor New Building, La Fuerza Compound, 2241 Chino Roces Ave., Brgy. Bangkal, Makati City, Metro Manila, Philippines 1233</p>
-</div>
-<div style="display: flex; gap: 14px">
-<svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" class="ic-gold" stroke="#7E5E27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<p><span style="color: var(--ink-soft)">Applicants:</span> <a href="mailto:apply@roma-overseas.com" style="font-weight: 600">apply@roma-overseas.com</a></p>
-<p><span style="color: var(--ink-soft)">Employers:</span> <a href="mailto:amapa@roma-overseas.com" style="font-weight: 600">amapa@roma-overseas.com</a></p>
-</div>
-</div>
-<div style="display: flex; gap: 14px">
-<svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" class="ic-gold" stroke="#7E5E27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>
-<p><span class="ph">[PHONE / VIBER]</span></p>
-</div>
-<div style="display: flex; gap: 14px">
-<svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" class="ic-gold" stroke="#7E5E27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-<p><span class="ph">[OFFICE HOURS]</span></p>
-</div>
-</div>
-</div>
-<a class="card card-link" href="https://www.google.com/maps/search/?api=1&amp;query=La+Fuerza+Plaza+2241+Chino+Roces+Ave+Makati" style="min-height: 360px; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; padding: 28px; background: linear-gradient(160deg, var(--card-a), var(--pill))">
-<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" class="ic-gold" stroke="#7E5E27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
-<span style="font-weight: 700">La Fuerza Plaza, Makati City</span>
-<span><span class="ph">[GOOGLE MAP EMBED]</span></span>
-<span class="go">Get directions <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</a>
-</div>
-</section>
-
-<!-- Footer -->
-<footer class="on-dark foot" style="background: #0F2318; color: #CFE0D5; font-size: 15px">
-<div class="wrap" style="padding-block: clamp(48px, 6vw, 80px) 32px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px 48px">
-<div style="display: flex; flex-direction: column; gap: 18px; max-width: 420px">
-<img src="assets/roma-logo-reverse.svg" alt="ROMA Overseas Manpower Inc." style="height: 60px; width: auto; align-self: flex-start">
-<p>Licensed by the Department of Migrant Workers. Licence No. <span class="ph">[DMW LICENCE NO.]</span>, valid until <span class="ph">[DATE]</span>.</p>
-</div>
-<nav aria-label="Footer" style="display: grid; grid-template-columns: repeat(2, minmax(140px, auto)); gap: 12px 48px; align-content: start">
-<a href="#jobs">Jobs</a>
-<a href="#employers">For Employers</a>
-<a href="#apply">Apply</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-<a href="#">Privacy notice</a>
-</nav>
-</div>
-<div style="display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08)">
-<svg aria-hidden="true" style="flex: none; margin-top: 2px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D8B648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"></path><path d="M12 10v4M12 17.5v.5"></path></svg>
-<p>Beware of scams. <span class="ph">[SCAM WARNING: official numbers, emails and payment policy]</span></p>
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 13.5px; color: #9FB5A7; border-top: 1px solid rgba(255,255,255,.12); padding-top: 22px">
-<p>© 2026 ROMA Overseas Manpower Inc. All rights reserved.</p>
-<p>Placeholder photos from Pexels</p>
-</div>
-</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="logo" src="assets/logo/roma-logo-reverse.svg" width="175" height="60" alt="ROMA Overseas Manpower Inc." loading="lazy" decoding="async">
+        <p>Licensed by the Department of Migrant Workers. Licence No. <span class="ph">[DMW LICENCE NO.]</span>, valid until <span class="ph">[DATE]</span>.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul role="list">
+          <li><a href="#jobs">Jobs</a></li>
+          <li><a href="#employers">For Employers</a></li>
+          <li><a href="#apply">Apply</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy notice</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__warning">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg>
+      <p><strong>Beware of scams.</strong> <span class="ph">[SCAM WARNING: official numbers, emails and payment policy]</span></p>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 ROMA Overseas Manpower Inc. All rights reserved.</p>
+      <p>Placeholder photos from Pexels</p>
+    </div>
+  </div>
 </footer>
-</div>
 
-<script>
-(function () {
-  var root = document.getElementById('ro');
-  var bar = document.getElementById('topbar');
-  var menu = document.getElementById('site-menu');
-  var menuBtn = document.querySelector('[data-action="menu"]');
-  var themeBtns = document.querySelectorAll('[data-action="theme"]');
+<button class="theme-fab" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">
+  <svg class="icon icon--moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+  <svg class="icon icon--sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+</button>
 
-  function setTheme(t) {
-    root.classList.toggle('t-dark', t === 'dark');
-    var label = t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-    themeBtns.forEach(function (b) {
-      b.setAttribute('aria-label', label); b.setAttribute('title', label);
-      var ic = b.querySelector('.fab-ic svg'); if (ic) { ic.style.animation = 'none'; void ic.offsetWidth; ic.style.animation = ''; }
-    });
-    try { localStorage.setItem('roma-theme', t); } catch (e) {}
-  }
-  var saved = null; try { saved = localStorage.getItem('roma-theme'); } catch (e) {}
-  setTheme(saved === 'dark' ? 'dark' : 'light');
-  themeBtns.forEach(function (b) { b.addEventListener('click', function () { setTheme(root.classList.contains('t-dark') ? 'light' : 'dark'); }); });
-
-  function setMenu(open) {
-    if (!menu || !menuBtn) return;
-    menu.hidden = !open;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    bar.classList.toggle('is-open', open);
-  }
-  if (menuBtn) menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
-  document.querySelectorAll('[data-action="close-menu"]').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
-
-  var lastY = window.scrollY;
-  window.addEventListener('scroll', function () {
-    var y = window.scrollY;
-    bar.classList.toggle('is-scrolled', y > 40);
-    if (menu && !menu.hidden) { bar.classList.remove('is-hidden'); lastY = y; return; }
-    if (y > lastY + 6 && y > 240) bar.classList.add('is-hidden');
-    else if (y < lastY - 6 || y <= 240) bar.classList.remove('is-hidden');
-    lastY = y;
-  }, { passive: true });
-
-  var track = document.getElementById('job-track');
-  if (track) {
-    var prev = document.querySelector('[data-action="prev"]');
-    var next = document.querySelector('[data-action="next"]');
-    var dots = document.querySelectorAll('[data-go]');
-    function step() {
-      var first = track.querySelector('.slide');
-      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-      return first ? first.getBoundingClientRect().width + gap : 0;
-    }
-    function sync() {
-      var w = step() || 1, idx = Math.round(track.scrollLeft / w);
-      prev.disabled = track.scrollLeft < 4;
-      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-      dots.forEach(function (d, i) { d.classList.toggle('on', i === idx); });
-    }
-    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
-    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
-    dots.forEach(function (d) { d.addEventListener('click', function () { track.scrollTo({ left: Number(d.getAttribute('data-go')) * step(), behavior: 'smooth' }); }); });
-    track.addEventListener('scroll', sync, { passive: true });
-    window.addEventListener('resize', sync);
-    sync();
-  }
-})();
-</script>
 </body>
 </html>
