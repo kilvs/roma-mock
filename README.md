@@ -14,7 +14,23 @@ Run it from this folder.
 
 Then open http://localhost:4321. Plain HTML, CSS and JS: no build step.
 
-## What changed from the 15 Oct mock
+## ROMA's comments (28 Oct 2026)
+
+From ROMA's email ("Pls proceed with the dev"), all applied:
+
+- Hero copy is ROMA's: "Connecting Talent Worldwide", the subline, the "People-first. Integrity-led.
+  Globally minded." tagline and its line (the line hides only on 320x568-size phones, to keep the fold).
+- Menu order: About, Jobs, For Employers, Contact, Apply now (header, phone menu, footer).
+- US spelling "License" in everything visitors read.
+- No email next to "Send a job order"; the employer accreditation steps and checklist are gone.
+- Jobs heading: "Career opportunities" eyebrow, "Find your next opportunity."
+- New `apply.html`: ROMA's "Take the first step." header and their application sheet as a six-step
+  form (position, personal information, personal references, education, latest job, résumé and
+  consent). Required: position, full name, email, mobile, résumé, privacy consent. Job cards open it
+  with the role filled in. On submit it shows a reference number like `26OCT001` (year, month,
+  count). In the mock the count lives in the browser and nothing is sent.
+
+
 
 - **Type.** Headings in Source Serif 4 (display cut), echoing the Times New Roman "ROMA" wordmark;
   body and UI stay in Montserrat. One token (`--font-serif`) swaps it.
