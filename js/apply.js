@@ -139,12 +139,14 @@
   var position = form.querySelector('#f-position');
   var otherWrap = form.querySelector('[data-other-position]');
   var otherInput = form.querySelector('#f-position-other');
+  var otherReq = form.querySelector('[data-other-req]');
   var country = form.querySelector('#f-country');
 
   function syncOther() {
     var isOther = position.value === 'other';
     otherWrap.hidden = !isOther;
     otherInput.required = isOther;
+    otherReq.hidden = !isOther;
     if (!isOther) setError(otherInput, '');
   }
   position.addEventListener('change', syncOther);
@@ -182,21 +184,21 @@
     if (e.target.checked) endDate.value = '';
   });
 
-  // Children: one row to start, add more as needed.
+  // Children: the page starts with one row; add more as needed.
   var children = form.querySelector('[data-children]');
   var childTemplate = form.querySelector('[data-child-template]');
   var addChild = form.querySelector('[data-add-child]');
   var MAX_CHILDREN = 8;
 
-  function addChildRow(focus) {
+  function addChildRow() {
     var n = children.children.length + 1;
     var html = childTemplate.innerHTML.replace(/\bN\b|-N\b|_N_/g, function (m) { return m.replace('N', n); });
     children.insertAdjacentHTML('beforeend', html);
     if (n >= MAX_CHILDREN) addChild.hidden = true;
-    if (focus) children.lastElementChild.querySelector('input').focus();
+    children.lastElementChild.querySelector('input').focus();
   }
-  addChildRow(false);
-  addChild.addEventListener('click', function () { addChildRow(true); });
+  addChild.hidden = false;
+  addChild.addEventListener('click', addChildRow);
 
   // Résumé: show the chosen file; drag and drop onto the zone.
   var upload = form.querySelector('[data-upload]');

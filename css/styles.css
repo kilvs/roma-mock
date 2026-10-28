@@ -75,6 +75,8 @@
   /* Elevation, tinted with the brand green */
   --sh-1: 0 1px 2px rgba(19, 48, 31, .06), 0 4px 12px -6px rgba(19, 48, 31, .10);
   --sh-2: 0 2px 4px rgba(19, 48, 31, .05), 0 22px 44px -20px rgba(19, 48, 31, .34);
+  /* Hover lift as a drop-shadow filter, which follows cut-outs (job tickets) */
+  --ds-2: drop-shadow(0 1px 2px rgba(19, 48, 31, .05)) drop-shadow(0 12px 14px rgba(19, 48, 31, .14));
 
   /* Motion */
   --dur: 200ms;
@@ -120,6 +122,7 @@
   --logo-sub: #FFFFFF;
   --sh-1: 0 1px 2px rgba(0, 0, 0, .35);
   --sh-2: 0 2px 4px rgba(0, 0, 0, .3), 0 22px 44px -20px rgba(0, 0, 0, .75);
+  --ds-2: drop-shadow(0 1px 2px rgba(0, 0, 0, .3)) drop-shadow(0 12px 14px rgba(0, 0, 0, .45));
 }
 
 /* ---------- 2. Base ---------- */
@@ -583,7 +586,13 @@ main:focus { outline: none; }
 .carousel__track.is-dragging,
 .carousel__track.is-dragging * { cursor: grabbing; -webkit-user-select: none; user-select: none; }
 .carousel__track.is-free { scroll-snap-type: none; }
-.carousel__slide { scroll-snap-align: start; display: flex; }
+/* Job tickets rest flat on their border so the notches read as clean cuts; the lift is hover only */
+.carousel__slide {
+  scroll-snap-align: start;
+  display: flex;
+  transition: filter var(--dur) var(--ease);
+}
+.carousel__slide:hover { filter: var(--ds-2); }
 .carousel__status {
   margin-top: 4px;
   color: var(--c-text-subtle);
@@ -600,10 +609,18 @@ main:focus { outline: none; }
   background: var(--c-card);
   border: 1px solid var(--c-border);
   border-radius: var(--r-lg);
-  box-shadow: var(--sh-1);
-  transition: box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease);
+  --notch: var(--c-border);
+  --stub-h: 76px;
+  /* Ticket notches are real holes, so the page and the shadow show through them */
+  -webkit-mask:
+    radial-gradient(circle at 0 calc(100% - var(--stub-h)), transparent 10.5px, #000 11px) left / 51% 100% no-repeat,
+    radial-gradient(circle at 100% calc(100% - var(--stub-h)), transparent 10.5px, #000 11px) right / 51% 100% no-repeat;
+  mask:
+    radial-gradient(circle at 0 calc(100% - var(--stub-h)), transparent 10.5px, #000 11px) left / 51% 100% no-repeat,
+    radial-gradient(circle at 100% calc(100% - var(--stub-h)), transparent 10.5px, #000 11px) right / 51% 100% no-repeat;
 }
-.job:hover { border-color: var(--c-border-strong); box-shadow: var(--sh-2); }
+.job:hover { border-color: var(--c-border-strong); --notch: var(--c-border-strong); }
 .job__media {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -656,7 +673,8 @@ main:focus { outline: none; }
 .job__link { color: inherit; text-decoration: none; }
 .job__link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--r-lg); }
 .job__link:focus-visible { outline: none; }
-.job__link:focus-visible::after { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+/* Inside the card edge: the notch mask clips anything drawn outside it */
+.job__link:focus-visible::after { outline: 3px solid var(--c-focus); outline-offset: -3px; }
 .job__req { color: var(--c-text-muted); font-size: 0.9375rem; line-height: 1.6; }
 
 /* Ticket stub: perforation with a notch either side */
@@ -666,24 +684,24 @@ main:focus { outline: none; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 16px 22px 18px;
+  height: var(--stub-h);
+  padding: 0 22px 2px;
   border-top: 2px dashed var(--c-border);
 }
+/* Outline of each notch: a ring on the hole's edge; the half outside the card is masked away */
 .job__stub::before,
 .job__stub::after {
   content: "";
   position: absolute;
-  top: -12px;
-  width: 22px;
-  height: 22px;
-  border: 1px solid var(--c-border);
+  top: -13px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--notch);
   border-radius: 50%;
-  background: var(--section-bg);
+  pointer-events: none;
 }
-.job__stub::before { left: -12px; clip-path: inset(0 0 0 50%); }
-.job__stub::after { right: -12px; clip-path: inset(0 50% 0 0); }
-.job:hover .job__stub::before,
-.job:hover .job__stub::after { border-color: var(--c-border-strong); }
+.job__stub::before { left: -13px; }
+.job__stub::after { right: -13px; }
 .job__openings { display: flex; align-items: baseline; gap: 6px; color: var(--c-text-muted); font-size: var(--fs-small); font-weight: 600; }
 .job__openings strong {
   font-family: var(--font-serif);
@@ -969,6 +987,7 @@ main:focus { outline: none; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.field__req[hidden] { display: none; }
 .field__unit { color: var(--c-text-muted); font-weight: 500; }
 .field__input {
   width: 100%;
@@ -1042,7 +1061,7 @@ select.field__input {
 
 .form__nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--c-border); }
 .form__nav [data-back] { margin-right: auto; }
-.form__nav [hidden] { display: none; }
+.form [hidden] { display: none; }
 
 .form__done { text-align: center; padding-block: 16px; }
 .form__done:focus { outline: none; }
@@ -1054,6 +1073,10 @@ select.field__input {
 .form__done .form__ref { font: 700 clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem)/1.1 var(--font-sans); letter-spacing: 0.06em; color: var(--c-heading); }
 .form__done .btn { margin-top: 24px; }
 
+/* Phones: the floating theme button steps aside while someone is filling in the form */
+@media (max-width: 760px) {
+  body:has(.form :focus) .theme-fab { opacity: 0; pointer-events: none; }
+}
 @media (max-width: 900px) {
   .apply__grid { grid-template-columns: minmax(0, 1fr); }
   .apply__intro { position: static; }
@@ -1128,7 +1151,7 @@ select.field__input {
   color: var(--brand-gold);
   cursor: pointer;
   box-shadow: 0 14px 30px -12px rgba(19, 48, 31, .6), inset 0 0 0 1px rgba(255, 255, 255, .08);
-  transition: background-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: background-color var(--dur) var(--ease), transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
 }
 .theme-fab:hover { background: #143823; transform: translateY(-2px); }
 .theme-fab:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; box-shadow: 0 0 0 8px #13241A, 0 14px 30px -12px rgba(19, 48, 31, .6); }

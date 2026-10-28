@@ -146,8 +146,8 @@
                 </select>
                 <p class="field__error" id="f-position-err"></p>
               </div>
-              <div class="field field--full" data-other-position hidden>
-                <label class="field__label" for="f-position-other">Which position? <span class="field__req">Required</span></label>
+              <div class="field field--full" data-other-position>
+                <label class="field__label" for="f-position-other">Other position <span class="field__req" data-other-req hidden>Required</span></label>
                 <input class="field__input" id="f-position-other" name="position_other" type="text" aria-describedby="f-position-other-err" data-msg="Enter the position you are applying for.">
                 <p class="field__error" id="f-position-other-err"></p>
               </div>
@@ -271,8 +271,20 @@
             </div>
             <div class="form__group">
               <p class="form__group-title" id="children-title">Children</p>
-              <ol class="form__rows" role="list" aria-labelledby="children-title" data-children></ol>
-              <button class="btn btn--secondary btn--sm" type="button" data-add-child>Add a child</button>
+              <ol class="form__rows" role="list" aria-labelledby="children-title" data-children>
+                <li class="form__row">
+                  <div class="field">
+                    <label class="field__label" for="f-child-1">Child 1: name</label>
+                    <input class="field__input" id="f-child-1" name="child_1_name" type="text">
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="f-child-1-no">Child 1: contact no.</label>
+                    <input class="field__input" id="f-child-1-no" name="child_1_contact" type="tel" inputmode="tel" aria-describedby="f-child-1-no-err" data-msg="Enter a phone number, like 0917 123 4567." data-phone>
+                    <p class="field__error" id="f-child-1-no-err"></p>
+                  </div>
+                </li>
+              </ol>
+              <button class="btn btn--secondary btn--sm" type="button" data-add-child hidden>Add a child</button>
             </div>
             <template data-child-template>
               <li class="form__row">
